@@ -1,11 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>360 Group</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.cdnfonts.com/css/vazirmatn" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Slider</title>
+    <style>
+        /* استایل برای اسلایدر */
+        
+    </style>
 </head>
-<body>
-    
+
+<body class="w-full h-full">
+
+    <!-- کانتینر اسلایدر -->
+    <div class="slider">
+        <div class="slider-content">
+            <!-- اسلاید اول -->
+            <main id="main1" class="slide flex items-center justify-center ">
+                <div class="text-center">
+                    <img src="public/pic/360  logo nahaeeeeeee-03 1.svg" alt="360 Logo" class="mx-auto h-[450px]">
+                    <button><a href="#" class="btn-1 px-11 py-1.5 flex my-5 mx-auto">بیشتر بدانید</a></button>
+                </div>
+            </main>
+
+            <!-- اسلاید دوم -->
+            <main id="main2" class="slide flex items-center justify-center ">
+                <div class="text-center">
+                    <img src="public/pic/360  logo nahaeeeeeee-07.svg" alt="360 Logo" class="mx-auto h-[450px]">
+                    <button><a href="#" class="btn-1 px-7 py-1.5 flex my-5 mx-auto">مشاهده‌ی سرویس‌ها</a></button>
+                </div>
+            </main>
+
+            <!-- اسلاید سوم -->
+            <main id="main3" class="slide flex items-center justify-center ">
+                <div class="text-center">
+                    <img src="public/pic/360  logo nahaeeeeeee-04.svg" alt="360 Tools" class="mx-auto h-[450px]">
+                    <button><a href="#" class="btn-1 px-11 py-1.5 flex my-5 mx-auto">مشاهده ابزارها</a></button>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        const sliderContent = document.querySelector('.slider-content');
+        let currentSlide = 0;
+        const totalSlides = 3;
+
+        function showNextSlide() {
+            // انتقال به اسلاید بعدی
+            currentSlide = (currentSlide + 1) % totalSlides;
+            sliderContent.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+            // تنظیم تایمر برای اسلاید بعدی
+            setTimeout(showNextSlide, 4000);
+        }
+
+        // شروع اسلایدر با تأخیر
+        setTimeout(showNextSlide, 4000);
+    </script>
 </body>
+
 </html>
