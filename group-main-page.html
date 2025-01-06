@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.cdnfonts.com/css/vazirmatn" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="./output.css" rel="stylesheet">
+
+    <title>360 Group</title>
+</head>
+
+<body style="background-color: #F5F5F7;" class="h-screen flex flex-col">
+    <header>
+        <nav>
+            <!-- نوار بالایی با دکمه بازگشت و منوی همبرگری -->
+            <div class="main1 flex justify-between items-center px-4 py-2">
+                <!-- دکمه منوی همبرگری -->
+
+                <button id="menu-toggle" class="text-2xl">
+                    <a href="menu.html">
+                        <img src="assets/svg/Menu.svg" alt="" class="mr-3 my-5 w-[25px] h-[25px]">
+                    </a>
+                </button>
+                <!-- دکمه بازگشت -->
+                <button class="text-2xl">
+                    <a href="slider.html">
+                        <img src="assets/svg/Chevron left.svg" alt="" class="ml-3 my-5 w-[25px] h-[25px] hover:cursor-pointer">
+                    </a>
+                </button>
+            </div>
+        </nav>
+        <hr class="hr h-[.5px] bg-red-900">
+        <!-- بخش بالایی با لوگو و QR Code -->
+        <div class="main1 flex-1 flex flex-col justify-center items-center text-white">
+            <!-- لوگو -->
+            <div class="text-center">
+                <img class="w-[300px]" src="assets/svg/360  logo nahaeeeeeee-03 1.svg" alt="">
+            </div>
+            <!-- QR Code -->
+            <div class="mt-6">
+                <img src="assets/svg/Group.svg" alt="QR Code" class="h-28 w-28 m-5">
+            </div>
+        </div>
+    </header>
+
+    <!-- بخش آکاردئون‌ها -->
+    <div class="py-8">
+        <div class="max-w-[1080px] mx-auto">
+            <!-- آکاردئون 1 -->
+            <div style="background-color: #fff;" class="border-b mb-4 w-50 h-50">
+                <button class="w-full text-right py-4 px-6 text-lg font-black text-[#333336] flex justify-between items-center" onclick="toggleAccordion('about-us')">
+                    درباره ما
+                    <span id="icon-about-us" class="transform transition-transform flex">
+                        <img src="assets/svg/Chevron.svg" class="chevron-icon" alt="">
+                    </span>
+                </button>
+                <div id="about-us" class="hidden px-6 pb-4 text-gray-600">
+                    <p>
+                        گروه ۳۶۰ درجه یک مجموعه نوآور است که با هدف فراهم آوردن راه حل‌های هوشمند و یکپارچه و راهکارهای علمی، در بازار رقابتی خود به موفقیت دست یابند.
+                        <br><br> در بخش ابزار، پلتفرم ما تمامی نیازهای مدیریتی و توسعه ای شما را در قالب یک داشبورد یکپارچه فراهم می‌کند. این پلتفرم به شما این امکان را می دهد تا تمامی جنبه های کسب‌وکار خود را تحت کنترل داشته باشید، از داده ها گرفته تا
+                        ابزار های تخصصی برای تصمیم‌گیری‌های بهینه و سریع تر.
+                        <br><br> تیم فنی و متخصصان ما همواره در حال ارتقاء این سیستم هستند و با اضافه کردن ویژگی های جدید، تلاش می‌کنند تا تجربه ای کامل و بی‌دغدغه برای شما ایجاد کنند. هدف ما این است که شما با آسودگی و تمرکز بر روی پیشرفت و موفقیت خود،
+                        از ابزارهای حرفه‌ای و کارآمد ما بهره‌برداری کنید.
+                        <br><br> در گروه ۳۶۰ درجه، تمامی آنچه برای رشد و موفقیت کسب‌وکار خود نیاز دارید، در دستان شماست.
+                        <br><br>
+                    </p>
+                </div>
+            </div>
+
+            <!-- آکاردئون 2 -->
+            <div style="background-color: #fff;" class="border-b border-gray-200 mb-4">
+                <button class="w-full text-right py-4 px-6 text-lg font-black text-[#333336] flex justify-between items-center" onclick="toggleAccordion('contact')">
+                    راه‌های ارتباطی
+                    <span id="icon-contact" class="transform transition-transform">
+                        <img src="assets/svg/Chevron.svg" class="chevron-icon" alt="">
+                    </span>
+                </button>
+                <div id="contact" class="px-6 pb-4 text-gray-600">
+                    <div class="flex mx-9">
+                        <a href="mailto:info@360group.ir;">
+                            <img class="mx-20" src="assets/svg/button-icon.svg" alt="">
+                        </a>
+                        <a href="" target="_blank">
+                            <img class="mx-20" src="assets/svg/button-icon2.svg" alt="">
+                        </a>
+                        <img class="mx-20" src="assets/svg/button-icon3.svg" alt="">
+                        <img class="mx-20" src="assets/svg/button-icon4.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- آکاردئون 3 -->
+            <div style="background-color: #fff;" class="border-b border-gray-200 mb-4">
+                <button class="w-full text-right py-4 px-6 text-lg font-black text-[#333336] flex justify-between items-center" onclick="toggleAccordion('jobs')">
+                    <p>فرصت‌های شغلی</p>
+                                 <span id="icon-jobs" class="transform transition-transform">
+                        <img src="assets/svg/Chevron.svg" class="chevron-icon" alt="">
+                    </span>
+                </button>
+                <div id="jobs" class="hidden px-6 pb-4 text-gray-600">
+                    <p>
+                        آیا آماده‌ای با خلاقیت و اشتیاقت، مسیری نو بسازی؟<br> اینجا، شما فرصتی دارید تا از مرزها عبور کنید، چیزهای جدید بیاموزید و بر آینده تأثیر بگذارید. اگر به دنبال تجربه‌ای معنادار، رشد فردی و فضایی پرانرژی هستید، همین حالا به ما بپیوندید!
+                    </p>
+                    <span class="flex"><a class="m-auto" href="group-job-offers.html"><button class="btn-2 py-3 px-14  my-3 m-auto " style="font-weight: bolder;">بیشتر بدانید</button></a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle a specific accordion
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.querySelector(`#icon-${id} img`);
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+                icon.style.filter = 'invert(31%) sepia(83%) saturate(6692%) hue-rotate(1deg) brightness(94%) contrast(109%)'; // Red
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+                icon.style.filter = ''; // Reset to default color
+            }
+        }
+
+        // Function to initialize specific accordions as open
+        function initializeAccordions() {
+            const defaultOpenAccordions = ['about-us', 'contact'];
+
+            defaultOpenAccordions.forEach((id) => {
+                const content = document.getElementById(id);
+                const icon = document.querySelector(`#icon-${id} img`);
+
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+                icon.style.filter = 'invert(31%) sepia(83%) saturate(6692%) hue-rotate(1deg) brightness(94%) contrast(109%)'; // Red
+            });
+        }
+
+        // Run initialization on page load
+        document.addEventListener('DOMContentLoaded', initializeAccordions);
+    </script>
+</body>
+
+</html>

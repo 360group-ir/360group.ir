@@ -1,21 +1,20 @@
 {
-  "name": "360group.ir",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tailwindcss build src/main.css -o dist/output.css",
-    "watch": "npx tailwindcss build src/main.css -o dist/output.css --watch",
-    "tailwind": "npx tailwindcss -i ./public/tailwind.css -o ./public/css/styles.css --watch"
-
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.17"
-  }
+    "name": "360group.ir",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "npx tailwindcss build src/main.css -o dist/output.css",
+        "watch": "npx tailwindcss build src/main.css -o dist/output.css --watch",
+        "tailwind": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "autoprefixer": "^10.4.20",
+        "postcss": "^8.4.49",
+        "tailwindcss": "^3.4.17"
+    }
 }
