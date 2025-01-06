@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.cdnfonts.com/css/vazirmatn" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="./output.css" rel="stylesheet">
+
+    <title>فرصت‌های شغلی</title>
+</head>
+
+<body style="background-color: #F5F5F7;" class="h-screen flex flex-col">
+    <header>
+        <nav>
+            <!-- نوار بالایی با دکمه بازگشت و منوی همبرگری -->
+            <div class="main1 flex justify-between items-center px-4 py-2">
+                <!-- دکمه منوی همبرگری -->
+                <button id="menu-toggle" class="text-2xl">
+                    <a href="menu.html">
+                        <img src="assets/svg/Menu.svg" alt="منو" class="mr-3 my-5 w-[25px] h-[25px]">
+                    </a>
+                </button>
+                <!-- دکمه بازگشت -->
+                <button class="text-2xl">
+                    <a href="index5.2.html">
+                        <img src="assets/svg/Chevron left.svg" alt="بازگشت" class="ml-3 my-5 w-[25px] h-[25px] hover:cursor-pointer">
+                    </a>
+                </button>
+            </div>
+        </nav>
+        <hr class="hr h-[.5px] bg-red-900">
+
+        <!-- بخش بالایی با لوگو و QR Code -->
+        <div class="main1 flex-1 flex flex-col justify-center items-center text-white">
+            <!-- لوگو -->
+            <div class="text-center">
+                <img class="w-[300px]" src="assets/svg/360  logo nahaeeeeeee-03 1.svg" alt="لوگو">
+            </div>
+            <!-- QR Code -->
+            <div class="mt-6">
+                <img src="assets/svg/Group.svg" alt="QR Code" class="h-28 w-28 m-5">
+            </div>
+        </div>
+    </header>
+
+    <!-- بخش اصلی -->
+    <section class="bg-[#F5F5F7]">
+        <div class="py-8">
+            <div class="max-w-[1000px] mx-auto text-[#333336]">
+                <h1 class="py-5 font-bold text-2xl">فرصت‌های شغلی</h1>
+
+                <p class="font-extralight text-sm">
+                    در تیم ما، رشد و یادگیری نه یک گزینه، بلکه بخشی از مسیر شماست. اینجا جایی است که با همکاری نزدیک با افراد حرفه‌ای در حوزه‌های مختلف، می‌توانید استعدادهای خود را شکوفا کنید و با ایده‌ها و دیدگاه‌های نوآورانه خود، تاثیر مثبتی بر آینده بگذارید. به ارزش‌های
+                    شما احترام می‌گذاریم و محیطی فراهم کرده‌ایم که هم تعادل زندگی و کار و هم شادی و رضایت شما در اولویت باشد.
+                    <br> اگر مشتاقید تا در فضایی حمایتگر، با انرژی و با همدلی کار کنید و فرصت‌های پیش‌رو را به فرصت‌های بزرگ‌تر برای خود و دیگران تبدیل کنید، ما منتظر شما هستیم. بیایید با هم، آینده را بسازیم!
+                </p>
+
+                <!-- آکاردئون -->
+                <div style="background-color: #fff; border-radius: 8px;" class="border-b border-gray-200 mb-4 my-5">
+                    <button class="w-full text-right py-4 px-6 text-lg font-black text-[#333336] flex justify-between items-center" onclick="toggleAccordion('contact')">
+                        دپارتمان فروش                        <span id="icon-contact" class="transform transition-transform flex items-center">
+                            <img src="assets/svg/Chevron.svg" class="chevron-icon ml-2" alt="فلش">
+                        </span>
+                    </button>
+                    <div id="contact" class=" flex px-9 pb-3 text-gray-600 ">
+                        <button class="sell-btn m-auto my-3">بازاریاب تلفنی</button>
+                    </div>
+                </div>
+                <span class="flex">
+                    <button class="btn-2 py-3 px-14  my-1 m-auto " style="font-weight: bolder;">به ما بپیوندید</button>
+                </span>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Function to toggle a specific accordion
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.querySelector(`#icon-${id} img`);
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+                icon.style.filter = 'invert(31%) sepia(83%) saturate(6692%) hue-rotate(1deg) brightness(94%) contrast(109%)'; // Red color
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+                icon.style.filter = ''; // Reset to default color
+            }
+        }
+
+        // Initialize all accordions as open
+        function initializeAccordions() {
+            const accordions = ['contact'];
+
+            accordions.forEach((id) => {
+                const content = document.getElementById(id);
+                const icon = document.querySelector(`#icon-${id} img`);
+
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+                icon.style.filter = 'invert(31%) sepia(83%) saturate(6692%) hue-rotate(1deg) brightness(94%) contrast(109%)'; // Red color
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', initializeAccordions);
+    </script>
+</body>
+
+</html>
