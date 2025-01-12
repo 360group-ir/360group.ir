@@ -2,132 +2,143 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <title>Swiper Demo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.cdnfonts.com/css/vazirmatn" rel="stylesheet">
-  <style>
-    .swiper-pagination {
-      position: absolute;
-      bottom: 80%;
-      left: 0;
-      right: 0;
-      z-index: 10;
-      text-align: center;
-      transform: translateY(-120px); /* Adjust this value to move it up further */
-    }
-
-    .swiper-pagination .swiper-pagination-bullet {
-      width: 12px;
-      height: 12px;
-      background-color: #fff;
-      margin: 0 6px;
-    }
-
-    .swiper-pagination .swiper-pagination-bullet-active {
-      background-color: #fff;
-      transform: scale(1.2);
-      opacity: 1;
-    }
-  </style>
+    <meta charset="utf-8" />
+    <title>Swiper Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.cdnfonts.com/css/vazirmatn" rel="stylesheet">
+    <style>
+        .swiper-pagination {
+            position: absolute;
+            bottom: 80%;
+            left: 0;
+            right: 0;
+            z-index: 10;
+            text-align: center;
+            transform: translateY(-120px);
+            /* Adjust this value to move it up further */
+        }
+        
+        .swiper-pagination .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background-color: #fff;
+            margin: 0 6px;
+        }
+        
+        .swiper-pagination .swiper-pagination-bullet-active {
+            background-color: #fff;
+            transform: scale(1.2);
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-200 h-full w-full font-sans">
-  <!-- Swiper -->
-  <div class="swiper mySwiper w-full h-screen">
-    <div class="swiper-wrapper">
-      <!-- Slide 1 -->
-      <div class="swiper-slide flex flex-col justify-center items-center text-center p-5" style="background-color: #CB202A;">
-        <img src="public/pic/360  logo nahaeeeeeee-03 1.svg" alt="360 Logo" class="max-w-full max-h-80 md:max-h-96">
-        <button>
+    <!-- Swiper -->
+    <div class="swiper mySwiper w-full h-screen">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide flex flex-col justify-center items-center text-center p-5" style="background-color: #CB202A;">
+                <img src="public/pic/360  logo nahaeeeeeee-03 1.svg" alt="360 Logo" class="max-w-full max-h-80 md:max-h-96">
+                <button>
           <a href="#" class="btn-1 bg-white text-gray-900 font-bold rounded-full shadow-lg px-6 py-2 mt-5 hover:bg-gray-300">
             بیشتر بدانید
           </a>
         </button>
-      </div>
-      <!-- Slide 2 -->
-      <div class="swiper-slide flex flex-col justify-center items-center text-center p-5" style="background-color: #27AAE1;">
-        <img src="public/pic/360  logo nahaeeeeeee-07.svg" alt="360 Logo" class="max-w-full max-h-80 md:max-h-96">
-        <button>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide flex flex-col justify-center items-center text-center p-5" style="background-color: #27AAE1;">
+                <img src="public/pic/360  logo nahaeeeeeee-07.svg" alt="360 Logo" class="max-w-full max-h-80 md:max-h-96">
+                <button>
           <a href="#" class="btn-1 bg-white text-gray-900 font-bold rounded-full shadow-lg px-6 py-2 mt-5 hover:bg-gray-300">
             مشاهده‌ی سرویس‌ها
           </a>
         </button>
-      </div>
-      <!-- Slide 3 -->
-      <div class="swiper-slide flex flex-col justify-center items-center text-center p-5" style="background-color: #FFB917;">
-        <img src="public/pic/360  logo nahaeeeeeee-04.svg" alt="360 Tools" class="max-w-full max-h-80 md:max-h-96">
-        <button>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide flex flex-col justify-center items-center text-center p-5" style="background-color: #FFB917;">
+                <img src="public/pic/360  logo nahaeeeeeee-04.svg" alt="360 Tools" class="max-w-full max-h-80 md:max-h-96">
+                <button>
           <a href="#" class="btn-1 bg-white text-gray-900 font-bold rounded-full shadow-lg px-6 py-2 mt-5 hover:bg-gray-300">
             مشاهده ابزارها
           </a>
         </button>
-      </div>
+            </div>
+        </div>
+        <!-- Pagination -->
+        <div class="swiper-pagination absolute bottom-[80%] left-0 right-0 z-10 text-center"></div>
     </div>
-    <!-- Pagination -->
-    <div class="swiper-pagination absolute bottom-[80%] left-0 right-0 z-10 text-center"></div>
-  </div>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper(".mySwiper", {
-      spaceBetween: 0,
-      centeredSlides: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      loop: true,
-      speed: 500,  // Reduced speed further to 500ms for slower transitions
-      lazy: true,
-      longSwipes: true,
-      longSwipesMs: 400, // Slightly increased swipe duration for better control
-      longSwipesRatio: 0.3,
-      threshold: 5, // Reduced the threshold for quicker swipe registration
-      resistance: true,
-      resistanceRatio: 0.7, // Increased resistance to prevent overswiping
-      followFinger: true,
-      touchReleaseOnEdges: true,
-      breakpoints: {
-        768: { spaceBetween: 0 },
-        1024: { spaceBetween: 0 },
-      },
-      initialSlide: 0, 
-      touchStartPreventDefault: true, // Prevent default touch behavior
-    });
-    swiper.on('slideChange', function () {
-      // Reset all bullets
-      document.querySelectorAll('.swiper-pagination-bullet').forEach(bullet => {
-        bullet.classList.remove('swiper-pagination-bullet-active');
-      });
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            spaceBetween: 0,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            loop: true,
+            speed: 500, // Reduced speed further to 500ms for slower transitions
+            lazy: true,
+            longSwipes: true,
+            longSwipesMs: 400, // Slightly increased swipe duration for better control
+            longSwipesRatio: 0.3,
+            threshold: 5, // Reduced the threshold for quicker swipe registration
+            resistance: true,
+            resistanceRatio: 0.7, // Increased resistance to prevent overswiping
+            followFinger: true,
+            touchReleaseOnEdges: true,
+            breakpoints: {
+                768: {
+                    spaceBetween: 0
+                },
+                1024: {
+                    spaceBetween: 0
+                },
+            },
+            initialSlide: 0,
+            touchStartPreventDefault: true, // Prevent default touch behavior
+        });
+        swiper.on('slideChange', function() {
+            // Reset all bullets
+            document.querySelectorAll('.swiper-pagination-bullet').forEach(bullet => {
+                bullet.classList.remove('swiper-pagination-bullet-active');
+            });
 
-      if (swiper.realIndex === 0) { 
-        document.querySelectorAll('.swiper-pagination-bullet')[1].classList.add('swiper-pagination-bullet-active'); // Middle bullet
-      } else if (swiper.realIndex === 1) { // Blue slide (second slide)
-        document.querySelectorAll('.swiper-pagination-bullet')[2].classList.add('swiper-pagination-bullet-active'); // Third bullet
-      } else if (swiper.realIndex === 2) { // Yellow slide (third slide)
-        document.querySelectorAll('.swiper-pagination-bullet')[0].classList.add('swiper-pagination-bullet-active'); // First bullet
-      }
-    });
+            if (swiper.realIndex === 0) {
+                document.querySelectorAll('.swiper-pagination-bullet')[1].classList.add('swiper-pagination-bullet-active'); // Middle bullet
+            } else if (swiper.realIndex === 1) { // Blue slide (second slide)
+                document.querySelectorAll('.swiper-pagination-bullet')[2].classList.add('swiper-pagination-bullet-active'); // Third bullet
+            } else if (swiper.realIndex === 2) { // Yellow slide (third slide)
+                document.querySelectorAll('.swiper-pagination-bullet')[0].classList.add('swiper-pagination-bullet-active'); // First bullet
+            }
+        });
 
-    window.addEventListener('load', function () {
-      setTimeout(function() {
-        document.querySelectorAll('.swiper-pagination-bullet')[0].classList.remove('swiper-pagination-bullet-active');
-        
-        document.querySelectorAll('.swiper-pagination-bullet')[1].classList.add('swiper-pagination-bullet-active');
-      }, 50); 
-    });
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelectorAll('.swiper-pagination-bullet')[0].classList.remove('swiper-pagination-bullet-active');
 
-    swiper.init();
-  </script>
+                document.querySelectorAll('.swiper-pagination-bullet')[1].classList.add('swiper-pagination-bullet-active');
+            }, 50);
+        });
+
+        swiper.init();
+    </script>
 </body>
 
 </html>
+
+
+<h1 class="py-5 font-bold text-2xl"> آموزش بازاریابی تکنولوژِی و فروش دیجیتال</h1>
+<p class="font-extralight text-sm">
+    گروه سیصد و شصت درجه به دنبال افرادی خلاق، پرانرژی و مشتاق یادگیری است که می‌خواهند در حوزه‌های دیجیتال مارکتینگ ، فروش تکنولوژِی و برندینگ تجربه کسب کنند و در کنار آموزش حرفه‌ای ،درامد قابل توجهی داشته باشند.
+</p>

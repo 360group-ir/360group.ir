@@ -1,68 +1,79 @@
-body{
-  font-family: 'Vazirmatn', sans-serif;
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    display: none;
 }
+
 .main1 {
-  background-color: #CB202A;
+    background-color: #CB202A;
 }
 
 .main2 {
-  background-color: #27AAE1;
+    background-color: #27AAE1;
 }
 
 .main3 {
-  background-color: #FFB917;
+    background-color: #FFB917;
 }
 
 .btn-1 {
-  background-color: #fff;
-  color: #333336;
-  border-radius: 19px;
-  font-family: 'Vazirmatn', sans-serif;
-  font-weight: 600;
-  box-shadow: rgb(0, 0, 0, 0.5);
+    background-color: #fff;
+    color: #333336;
+    border-radius: 19px;
+    font-family: 'Vazirmatn', sans-serif;
+    font-weight: 600;
+    box-shadow: rgb(0, 0, 0, 0.5);
 }
+
 .slider {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .slider-content {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  transition: transform 1s ease-in-out;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease-in-out;
 }
 
 .slide {
-  flex: 1 0 100%;
-  height: 100%;
+    flex: 1 0 100%;
+    height: 100%;
 }
+
 .icon {
-  color: red; /* Change color to red */
-  position: relative;
-  top: -10px; /* Move the icon upward */
+    color: red;
+    /* Change color to red */
+    position: relative;
+    top: -10px;
+    /* Move the icon upward */
 }
-.btn-2{
-  border-radius: 6px;
-  background-color: #CB202A;
-  color: #fff;
+
+.btn-2 {
+    border-radius: 6px;
+    background-color: #CB202A;
+    color: #fff;
 }
-.sell-btn{
-  border-radius: 5px;
-  background-color: #F5F5F7;
-  color: #333336;
-  padding:12px 130px;
-  border: 1px solid black;
-  font-weight: bold;
+
+.sell-btn {
+    border-radius: 5px;
+    background-color: #F5F5F7;
+    color: #333336;
+    padding: 12px 130px;
+    border: 1px solid black;
+    font-weight: bold;
 }
-.sell-btn2{
-  background-color: #CB202A;
-  color: #fff;
-  border-radius: 5px;
-  
+
+.sell-btn2 {
+    background-color: #CB202A;
+    color: #fff;
+    border-radius: 5px;
 }
-body li{
-  
+
+.form {
+    border: .2px;
+    box-shadow: #333336;
+    padding: 3;
 }

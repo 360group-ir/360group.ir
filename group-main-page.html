@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.cdnfonts.com/css/vazirmatn" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <link href="./output.css" rel="stylesheet">
+    <link href="src/output.css" rel="stylesheet">
 
     <title>360 Group</title>
 </head>
@@ -25,6 +25,7 @@
                     </a>
                 </button>
                 <!-- دکمه بازگشت -->
+
                 <button class="text-2xl">
                     <a href="slider.html">
                         <img src="assets/svg/Chevron left.svg" alt="" class="ml-3 my-5 w-[25px] h-[25px] hover:cursor-pointer">
@@ -83,11 +84,16 @@
                         <a href="mailto:info@360group.ir;">
                             <img class="mx-20" src="assets/svg/button-icon.svg" alt="">
                         </a>
-                        <a href="" target="_blank">
+                        <a href="https://www.instagram.com/360group.ir?igsh=c3Vlc2U5OGNyZmJt" target="_blank">
                             <img class="mx-20" src="assets/svg/button-icon2.svg" alt="">
                         </a>
-                        <img class="mx-20" src="assets/svg/button-icon3.svg" alt="">
-                        <img class="mx-20" src="assets/svg/button-icon4.svg" alt="">
+                        <a href="https://www.google.com/maps/place/%D9%85%D8%B1%DA%A9%D8%B2+%D8%B1%D8%B4%D8%AF+%D9%88+%D9%86%D9%88%D8%A2%D9%88%D8%B1%DB%8C%E2%80%AD/@35.7853383,51.3170736,17.82z/data=!4m6!3m5!1s0x3f8de319d80dfc7d:0xc02225f8b791152b!8m2!3d35.7860156!4d51.3177139!16s%2Fg%2F11jclb9hsq?entry=ttu&g_ep=EgoyMDI1MDEwOC4wIKXMDSoASAFQAw%3D%3D"
+                            target="_blank">
+                            <img class="mx-20" src="assets/svg/button-icon3.svg" alt="">
+                        </a>
+                        <a href="">
+                            <img class="mx-20" src="assets/svg/button-icon4.svg" alt="">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -143,6 +149,11 @@
 
         // Run initialization on page load
         document.addEventListener('DOMContentLoaded', initializeAccordions);
+
+        //opening the page with a delay of 1 second
+        setTimeout(() => {
+            document.body.style.display = "block";
+        }, 2000);
     </script>
 </body>
 

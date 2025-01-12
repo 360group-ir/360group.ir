@@ -25,14 +25,12 @@
                 </button>
                 <!-- دکمه بازگشت -->
                 <button class="text-2xl">
-                    <a href="index5.2.html">
+                    <a href="group-main-page.html">
                         <img src="assets/svg/Chevron left.svg" alt="بازگشت" class="ml-3 my-5 w-[25px] h-[25px] hover:cursor-pointer">
                     </a>
                 </button>
             </div>
         </nav>
-        <hr class="hr h-[.5px] bg-red-900">
-
         <!-- بخش بالایی با لوگو و QR Code -->
         <div class="main1 flex-1 flex flex-col justify-center items-center text-white">
             <!-- لوگو -->
@@ -43,9 +41,10 @@
             <div class="mt-6">
                 <img src="assets/svg/Group.svg" alt="QR Code" class="h-28 w-28 m-5">
             </div>
+            <hr class="hr h-[.5px] bg-red-900">
+
         </div>
     </header>
-
     <!-- بخش اصلی -->
     <section class="bg-[#F5F5F7]">
         <div class="py-8">
@@ -61,16 +60,21 @@
                 <!-- آکاردئون -->
                 <div style="background-color: #fff; border-radius: 8px;" class="border-b border-gray-200 mb-4 my-5">
                     <button class="w-full text-right py-4 px-6 text-lg font-black text-[#333336] flex justify-between items-center" onclick="toggleAccordion('contact')">
-                        دپارتمان فروش                        <span id="icon-contact" class="transform transition-transform flex items-center">
+                        دپارتمان فروش                        
+                        <span id="icon-contact" class="transform transition-transform flex items-center">
                             <img src="assets/svg/Chevron.svg" class="chevron-icon ml-2" alt="فلش">
                         </span>
                     </button>
                     <div id="contact" class=" flex px-9 pb-3 text-gray-600 ">
-                        <button class="sell-btn m-auto my-3">بازاریاب تلفنی</button>
+                        <a href="contact-us.html" class=" m-auto">
+                            <button class="sell-btn m-auto my-3">بازاریاب تلفنی</button>
+                        </a>
                     </div>
                 </div>
                 <span class="flex">
-                    <button class="btn-2 py-3 px-14  my-1 m-auto " style="font-weight: bolder;">به ما بپیوندید</button>
+                    <a class="m-auto" href="request.html">
+                        <button class="btn-2 py-3 px-14  my-1 m-auto " style="font-weight: bolder;">به ما بپیوندید</button>
+                    </a>
                 </span>
 
             </div>
@@ -109,6 +113,11 @@
         }
 
         document.addEventListener('DOMContentLoaded', initializeAccordions);
+
+        //opening the page with a delay of 1 second
+        setTimeout(() => {
+            document.body.style.display = "block";
+        }, 1000);
     </script>
 </body>
 
