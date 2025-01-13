@@ -14,7 +14,7 @@
 
 <body style="background-color: #F5F5F7;" class="h-screen flex flex-col">
     <header>
-        <nav>
+        <nav class="w-full bg-[#CB202A] fixed top-0 left-0 z-50">
             <!-- نوار بالایی با دکمه بازگشت و منوی همبرگری -->
             <div class="main1 flex justify-between items-center px-4 py-2">
                 <!-- دکمه منوی همبرگری -->
@@ -49,15 +49,18 @@
 
     <!-- بخش آکاردئون‌ها -->
     <div class="py-8">
-        <div class="max-w-[1080px] mx-auto">
+        <div class="max-w-4xl mx-auto px-4">
+
             <!-- آکاردئون 1 -->
-            <div style="background-color: #fff;" class="border-b mb-4 w-50 h-50">
-                <button class="w-full text-right py-4 px-6 text-lg font-black text-[#333336] flex justify-between items-center" onclick="toggleAccordion('about-us')">
+            <div class=" bg-[#fff] border-b mb-4 w-50 h-50">
+                <span id="icon-about-us" class="transform transition-transform flex px-8" onclick="toggleAccordion('about-us')">
+                        <img src="assets/svg/Chevron.svg" class="chevron-icon pr-4" alt=""  >
+                        <button class="w-full text-right py-4  text-lg font-black text-[#333336] flex justify-between items-center" >
                     درباره ما
-                    <span id="icon-about-us" class="transform transition-transform flex">
-                        <img src="assets/svg/Chevron.svg" class="chevron-icon" alt="">
-                    </span>
+                    
                 </button>
+                    </span>
+
                 <div id="about-us" class="hidden px-6 pb-4 text-gray-600">
                     <p>
                         گروه ۳۶۰ درجه یک مجموعه نوآور است که با هدف فراهم آوردن راه حل‌های هوشمند و یکپارچه و راهکارهای علمی، در بازار رقابتی خود به موفقیت دست یابند.
@@ -73,40 +76,49 @@
 
             <!-- آکاردئون 2 -->
             <div style="background-color: #fff;" class="border-b border-gray-200 mb-4">
-                <button class="w-full text-right py-4 px-6 text-lg font-black text-[#333336] flex justify-between items-center" onclick="toggleAccordion('contact')">
-                    راه‌های ارتباطی
-                    <span id="icon-contact" class="transform transition-transform">
-                        <img src="assets/svg/Chevron.svg" class="chevron-icon" alt="">
-                    </span>
-                </button>
+                <button class="w-full text-right py-4 px-6 text-lg font-black text-[#333336] flex justify-between items-center" onclick="toggleAccordion('contact')"> 
+        راه‌های ارتباطی 
+        <span id="icon-contact" class="transform transition-transform"> 
+            <img src="assets/svg/Chevron.svg" class="chevron-icon" alt=""> 
+        </span> 
+    </button>
+
                 <div id="contact" class="px-6 pb-4 text-gray-600">
-                    <div class="flex mx-9">
-                        <a href="mailto:info@360group.ir;">
-                            <img class="mx-20" src="assets/svg/button-icon.svg" alt="">
+                    <div class="flex flex-nowrap overflow-x-auto justify-center gap-6 sm:gap-8 lg:gap-12 mx-auto">
+                        <!-- First Icon -->
+                        <a href="mailto:info@360group.ir;" class="shrink-0">
+                            <img class="w-16 sm:w-20 lg:w-24 mx-auto" src="assets/svg/button-icon.svg" alt="">
                         </a>
-                        <a href="https://www.instagram.com/360group.ir?igsh=c3Vlc2U5OGNyZmJt" target="_blank">
-                            <img class="mx-20" src="assets/svg/button-icon2.svg" alt="">
+                        <!-- Second Icon -->
+                        <a href="" target="_blank" class="shrink-0">
+                            <img class="w-16 sm:w-20 lg:w-24 mx-auto" src="assets/svg/button-icon2.svg" alt="">
                         </a>
-                        <a href="https://www.google.com/maps/place/%D9%85%D8%B1%DA%A9%D8%B2+%D8%B1%D8%B4%D8%AF+%D9%88+%D9%86%D9%88%D8%A2%D9%88%D8%B1%DB%8C%E2%80%AD/@35.7853383,51.3170736,17.82z/data=!4m6!3m5!1s0x3f8de319d80dfc7d:0xc02225f8b791152b!8m2!3d35.7860156!4d51.3177139!16s%2Fg%2F11jclb9hsq?entry=ttu&g_ep=EgoyMDI1MDEwOC4wIKXMDSoASAFQAw%3D%3D"
-                            target="_blank">
-                            <img class="mx-20" src="assets/svg/button-icon3.svg" alt="">
+                        <!-- Third Icon -->
+                        <a href="" class="shrink-0">
+                            <img class="w-16 sm:w-20 lg:w-24 mx-auto" src="assets/svg/button-icon3.svg" alt="">
                         </a>
-                        <a href="">
-                            <img class="mx-20" src="assets/svg/button-icon4.svg" alt="">
+                        <!-- Fourth Icon -->
+                        <a href="" class="shrink-0">
+                            <img class="w-16 sm:w-20 lg:w-24 mx-auto" src="assets/svg/button-icon4.svg" alt="">
                         </a>
                     </div>
                 </div>
             </div>
 
+
+
+
             <!-- آکاردئون 3 -->
-            <div style="background-color: #fff;" class="border-b border-gray-200 mb-4">
-                <button class="w-full text-right py-4 px-6 text-lg font-black text-[#333336] flex justify-between items-center" onclick="toggleAccordion('jobs')">
+            <div class="bg-[#fff] border-b border-gray-200 mb-4 px-8">
+                <span id="icon-jobs" class="transform transition-transform flex" onclick="toggleAccordion('jobs')">
+                        <img src="assets/svg/Chevron.svg" class="chevron-icon pl-2" alt="">
+                        <button class="w-full text-right py-4 text-lg font-black text-[#333336] flex justify-between items-center" >
                     <p>فرصت‌های شغلی</p>
-                                 <span id="icon-jobs" class="transform transition-transform">
-                        <img src="assets/svg/Chevron.svg" class="chevron-icon" alt="">
-                    </span>
+                    
                 </button>
-                <div id="jobs" class="hidden px-6 pb-4 text-gray-600">
+                    </span>
+
+                <div id="jobs" class="hidden px-1 pb-4 text-gray-600">
                     <p>
                         آیا آماده‌ای با خلاقیت و اشتیاقت، مسیری نو بسازی؟<br> اینجا، شما فرصتی دارید تا از مرزها عبور کنید، چیزهای جدید بیاموزید و بر آینده تأثیر بگذارید. اگر به دنبال تجربه‌ای معنادار، رشد فردی و فضایی پرانرژی هستید، همین حالا به ما بپیوندید!
                     </p>
@@ -126,10 +138,13 @@
                 content.classList.remove('hidden');
                 icon.style.transform = 'rotate(180deg)';
                 icon.style.filter = 'invert(31%) sepia(83%) saturate(6692%) hue-rotate(1deg) brightness(94%) contrast(109%)'; // Red
+                icon.style.padding = '8px'
+
             } else {
                 content.classList.add('hidden');
                 icon.style.transform = 'rotate(0deg)';
                 icon.style.filter = ''; // Reset to default color
+                icon.style.padding = '8px'
             }
         }
 

@@ -14,11 +14,13 @@
     <!-- Header -->
     <header class="w-full flex justify-between items-center px-4">
         <!-- Back Button -->
-        <button class="">
-          <a href="slider.html">
-              <img src="assets/svg/Chevron left.svg" alt="" class="ml-2 mt-5 w-7 h-7 hover:cursor-pointer">
+        <button class="" onclick="goBack()">
+          <a href="#">
+              <img src="assets/svg/Chevron left.svg" alt="" class="ml-2 mt-5 w-7 h-7 hover:cursor-pointer" >
           </a>
         </button>
+
+
 
     </header>
 
@@ -39,7 +41,11 @@
         <a href="contact-us.html" class="my-6 text-xl font-bold  hover:cursor-pointer">ارتباط با ما</a>
     </nav>
 
-
+    <script>
+        function goBack() {
+            history.back();
+        }
+    </script>
 </body>
 
 </html>
