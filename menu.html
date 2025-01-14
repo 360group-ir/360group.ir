@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 
 <head>
     <meta charset="UTF-8">
@@ -7,34 +7,45 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.cdnfonts.com/css/vazirmatn" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <link href="./output.css" rel="stylesheet">
-    <title>Document</title>
+    <title>360 Group</title>
 </head>
 
-<body class="bg-[#CB202A] text-[#fff]">
-    <div class="main1 flex justify-between items-center px-4 py-2">
+<body class="bg-[#CB202A] text-white h-screen flex flex-col items-center justify-between">
+    <!-- Header -->
+    <header class="w-full flex justify-between items-center px-4">
+        <!-- Back Button -->
+        <button class="" onclick="goBack()">
+          <a href="#">
+              <img src="assets/svg/Chevron left.svg" alt="" class="ml-2 mt-5 w-7 h-7 hover:cursor-pointer" >
+          </a>
+        </button>
 
-        <!-- دکمه بازگشت -->
-        <button class="text-2xl">
-        <a href="slider.html">
-            <img src="assets/svg/Chevron left.svg" alt="" class="ml-3 my-5 w-[25px] h-[25px] hover:cursor-pointer">
-        </a>
-    </button>
-        <hr class="hr h-[.5px] bg-white">
-    </div>
-    <img class="m-auto w-[200px] my-6" src="assets/svg/360  logo nahaeeeeeee-03 1.svg" alt="">
+
+
+    </header>
+
+
+    <!-- Logo Section -->
+    <main class="flex flex-col items-center">
+        <img class="m-auto w-[190px] " src="assets/svg/360  logo nahaeeeeeee-03 1.svg" alt="">
+    </main>
+
     <!-- Navigation Links -->
-    <nav class="flex flex-col items-center space-y-4 mb-8 ">
-        <a href="#" class="my-6 text-lg font-bold hover:cursor-pointer">گروه ۳۶۰</a>
-        <a href="#" class="my-6 text-lg font-bold hover:cursor-pointer">صفحه اصلی</a>
-        <a href="#" class="my-6 text-lg font-bold hover:cursor-pointer">خدمات ۳۶۰</a>
-        <a href="#" class="my-6 text-lg font-bold hover:cursor-pointer">ابزار ۳۶۰</a>
-        <a href="#" class="my-6 text-lg font-bold hover:cursor-pointer">فرصت‌های شغلی</a>
-        <a href="#" class="my-6 text-lg font-bold hover:cursor-pointer">ارتباط با ما</a>
+    <nav class="flex flex-col items-center   ">
+        <a href="slider.html" class="mb-6 text-xl font-bold  hover:cursor-pointer">صفحه اصلی</a>
+        <a href="group-main-page.html" class="my-6 text-xl font-bold  hover:cursor-pointer">گروه ۳۶۰</a>
+        <a href="#" class="my-6 text-xl font-bold  hover:cursor-pointer">خدمات ۳۶۰</a>
+        <!-- link to services page (nikta)-->
+        <a href="https://360tools.io/auth/login" class="my-6 text-xl font-bold  hover:cursor-pointer">ابزار ۳۶۰</a>
+        <a href="group-job-offers.html" class="my-6 text-xl font-bold  hover:cursor-pointer">فرصت‌های شغلی</a>
+        <a href="contact-us.html" class="my-6 text-xl font-bold  hover:cursor-pointer">ارتباط با ما</a>
     </nav>
 
-
-
+    <script>
+        function goBack() {
+            history.back();
+        }
+    </script>
 </body>
 
 </html>
