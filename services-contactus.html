@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرم ارتباط با ما</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles/main.css">
+    <style>
+        @font-face {
+          font-family: 'Vazirmatn';
+          font-style: normal;
+          font-weight: 400;
+          src: local('Vazirmatn'), url('https://fonts.cdnfonts.com/s/107409/Vazirmatn[wght].woff') format('woff');
+        }
+        body {
+          font-family: 'Vazirmatn', sans-serif;
+        }
+      </style>
+</head>
+<body class="bg-gray-100">
+  <br>
+  <br>
+
+  <header class="text-white py-4 fixed top-0 left-0 w-full z-50" style="background-color: #27AAE1;">
+    <!-- Chevron Button -->
+    <button class="absolute top-4 left-6" onclick="goBack()">
+      <img 
+        src="assets/svg/Chevron left.svg" 
+        alt="Go Back" 
+        class="w-[25px] h-[25px] hover:cursor-pointer"
+      >
+    </button>
+    
+    <script>
+      function goBack() {
+        history.back();
+      }
+    </script>
+  
+    <!-- Menu Toggle -->
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <button id="menu-toggle" class="text-2xl">
+        <a href="menu-service.html"><img src="assets/svg/Menu.svg" alt="منو" class="w-[25px] h-[25px]"></a>
+      </button>
+    </div>
+  </header>
+  
+ <div class="wrapper">
+  <div class="container mx-auto mt-8 px-4 flex justify-center relative">
+    <a href="#" class="right-0 text-2xl font-extrabold">ارتباط با ما</a>
+  </div>
+  <br>
+  
+<div class="justify-right max-w-lg mx-auto mt-8 bg-white rounded-lg shadow p-6">
+  <h2 class="text-xl font-medium">ارسال درخواست</h2>
+
+    <div class="container mx-auto mt-8 px-4">
+    </div>
+    <form>
+        <div class="mb-4">
+            <label for="name" class="block mb-2 text-sm font-medium text-gray-700">نام و نام خانوادگی</label>
+            <input type="text" id="name" name="name" placeholder="نام و نام خانوادگی" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <div class="mb-4">
+            <label for="phone" class="block mb-2 text-sm font-medium text-gray-700">شماره موبایل</label>
+            <input id="phone" name="phone" placeholder="شماره موبایل" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <div class="mb-4">
+            <label for="message" class="block mb-2 text-sm font-medium text-gray-700">متن درخواست</label>
+            <textarea id="message" name="message" placeholder="متن درخواست" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 h-32 resize-none"></textarea>
+        </div>
+
+        <div>
+            <button type="submit" class="w-full text-white p-3 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500" style="background-color: #27AAE1;">ارسال درخواست</button>
+        </div>
+    </form>
+</div>
+ </div>
+
+</body>
+</html>
