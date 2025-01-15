@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,45 +16,43 @@
       font-weight: 400;
       src: local('Vazirmatn'), url('https://fonts.cdnfonts.com/s/107409/Vazirmatn[wght].woff') format('woff');
     }
+
     body {
       font-family: 'Vazirmatn', sans-serif;
     }
+
     @keyframes slideUp {
-            from {
-                transform: translateY(100%);
-            }
-            to {
-                transform: translateY(0);
-            }
-        }
+      from {
+        transform: translateY(100%);
+      }
 
-        .slide-up {
-            animation: slideUp 0.5s ease-out forwards;
-        }
+      to {
+        transform: translateY(0);
+      }
+    }
 
-    
+    .slide-up {
+      animation: slideUp 0.5s ease-out forwards;
+    }
   </style>
 </head>
+
 <body class="bg-gray-100 text-gray-800">
   <!-- Header -->
-   <br>
-   <br>
+  <br>
+  <br>
   <header class="text-white py-4 fixed top-0 left-0 w-full z-50" style="background-color: #27AAE1;">
     <!-- Chevron Button -->
     <button class="absolute top-4 left-6" onclick="goBack()">
-      <img 
-        src="assets/svg/Chevron left.svg" 
-        alt="Go Back" 
-        class="w-[25px] h-[25px] hover:cursor-pointer"
-      >
+      <img src="assets/svg/Chevron left.svg" alt="Go Back" class="w-[25px] h-[25px] hover:cursor-pointer">
     </button>
-    
+
     <script>
       function goBack() {
         history.back();
       }
     </script>
-  
+
     <!-- Menu Toggle -->
     <div class="container mx-auto flex justify-between items-center px-4">
       <button id="show-menu" class="px-4 py-2  text-white rounded-lg " style="background-color: #27AAE1;">
@@ -61,223 +60,326 @@
       </button>
     </div>
   </header>
-  
-<br>
+
+  <br>
   <!-- Content -->
-  <main class="container mx-auto mt-8 px-4">
+  <main class="container mx-auto mt-8 px-4 max-w-4xl">
     <a href="#" class="text-2xl font-extrabold">خدمات ۳۶۰</a>
 
 
-<!-- Accordion Section -->
+    <!-- Accordion Section -->
     <div class="mt-6 space-y-4">
       <!-- Accordion Items -->
       <div class="bg-white p-4 rounded-lg shadow-md">
         <button class="w-full flex justify-between items-center">
-          <span class="text-gray-800 font-bold">برندینگ </span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z" clip-rule="evenodd" />
-          </svg>
+          <div class="flex items-center ml-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform ml-2"
+              viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z"
+                clip-rule="evenodd" />
+            </svg>
+            <span class="text-gray-800 font-bold">برندینگ </span>
+          </div>
+
         </button>
         <div class="accordion-content hidden mt-2 text-gray-600">
           <!-- //TODO <img src="" alt="">     -->
-          <p>فرآیندی است که طی آن هویتی منحصربفرد برای کسب و کار در ذهن مشتری شکل می‌کیرد. هدف از برندینگ، ایجاد حضوری متمایز و برجسته در بازار است تا مشتریان وفادار، جذب و حفظ شوند
+          <p>فرآیندی است که طی آن هویتی منحصربفرد برای کسب و کار در ذهن مشتری شکل می‌کیرد. هدف از برندینگ، ایجاد حضوری
+            متمایز و برجسته در بازار است تا مشتریان وفادار، جذب و حفظ شوند
           </p>
           <br>
           <br>
           <div class="flex justify-center items-center">
-            <a href="./services-branding.html"><button class="text-white py-2 px-10 rounded-md text-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400" style="background-color: #27AAE1;">
-              بیشتر بدانید
-            </button></a>
+            <a href="./services-branding.html"><button
+                class="text-white py-2 px-10 rounded-md text-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                style="background-color: #27AAE1;">
+                بیشتر بدانید
+              </button></a>
           </div>
         </div>
       </div>
 
       <div class="bg-white p-4 rounded-lg shadow-md">
         <button class="w-full flex justify-between items-center">
-          <span class="text-gray-800 font-bold">بازاریابی محتوا</span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z" clip-rule="evenodd" />
-          </svg>
-        </button>
-        <div class="accordion-content hidden mt-2 text-gray-600">
- <!-- //TODO <img src="" alt="">     -->
-
-<p>بازاریابی محتوا بر ایجاد و توزیع محتوای ارزشمند و مرتبط جهت جذب و حفظ مخاطبان تمرکز دارد. بازاریابی محتوا یک راه موثر برای ایجاد آگاهی و تعامل با کسب و کار از طریق به کارگیری کانال‌های مختلف به حساب می‌آید
-</p>     
-<br>
-          <br>
-          <div class="flex justify-center items-center">
-            <a href="./services-marketing.html"><button class="text-white py-2 px-10 rounded-md text-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400" style="background-color: #27AAE1;">
-              بیشتر بدانید
-            </button></a>
-          </div>   </div>
-      </div>
-
-      <div class="bg-white p-4 rounded-lg shadow-md">
-        <button class="w-full flex justify-between items-center">
-          <span class="text-gray-800 font-bold">طراحی وب سایت</span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z" clip-rule="evenodd" />
-          </svg>
-        </button>
-        <div class="accordion-content hidden mt-2 text-gray-600">
-                    <!-- //TODO <img src="" alt="">     -->
-
-          <p>طراحی وب سایت، بر نحوه درک مخاطب از برند شما تاثیر می‌گذارد. یک وب سایت خوب می‌تواند بازدیدکنندگان بیشتری جذب کرده و آنها را تشویق کند تا با محتوای تولید کسب و کار تعامل داشته باشند
-          </p>
-          <br>
-          <br>
-          <div class="flex justify-center items-center">
-            <a href="services-webdesign.html"><button class="text-white py-2 px-10 rounded-md text-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400" style="background-color: #27AAE1;">
-              بیشتر بدانید
-            </button></a>
+          <div class="flex items-center ml-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform ml-2"
+              viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z"
+                clip-rule="evenodd" />
+            </svg>
+            <span class="text-gray-800 font-bold">بازاریابی محتوا</span>
           </div>
-        </div>
-      </div>
-
-      <div class="bg-white p-4 rounded-lg shadow-md">
-        <button class="w-full flex justify-between items-center">
-          <span class="text-gray-800 font-bold">تحقیقات بازار</span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z" clip-rule="evenodd" />
-          </svg>
         </button>
         <div class="accordion-content hidden mt-2 text-gray-600">
-                    <!-- //TODO <img src="" alt="">     -->
-
-          <p>تحقیقات بازار برای درک نیازهای مصرف کننده، روندهای بازار و پویایی رقابت اهمیت بالایی دارد و شامل جمع آوری، تجزیه و تحلیل، و تفسیر داده‌ها در مورد بازار، جهت تصمیم‌گیری‌های تجاری مانند توسعه محصول و استراتژی های بازاریابی می‌شود
+          <!-- //TODO <img src="" alt="">     -->
+          <p>بازاریابی محتوا بر ایجاد و توزیع محتوای ارزشمند و مرتبط جهت جذب و حفظ مخاطبان تمرکز دارد. بازاریابی محتوا
+            یک راه موثر برای ایجاد آگاهی و تعامل با کسب و کار از طریق به کارگیری کانال‌های مختلف به حساب می‌آید
           </p>
           <br>
           <br>
           <div class="flex justify-center items-center">
-            <a href="sevices-marketresearch.html"><button class="text-white py-2 px-10 rounded-md text-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400" style="background-color: #27AAE1;">
-              بیشتر بدانید
-            </button></a>
+            <a href="services-marketing.html"><button
+                class="text-white py-2 px-10 rounded-md text-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                style="background-color: #27AAE1;">
+                بیشتر بدانید
+              </button></a>
           </div>
         </div>
       </div>
       <div class="bg-white p-4 rounded-lg shadow-md">
         <button class="w-full flex justify-between items-center">
-          <span class="text-gray-800 font-bold">برگزاری رویداد های تخصصی و تعاملی  </span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z" clip-rule="evenodd" />
-          </svg>
+          <div class="flex items-center ml-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform ml-2"
+              viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z"
+                clip-rule="evenodd" />
+            </svg>
+            <span class="text-gray-800 font-bold">طراحی وب سایت</span>
+          </div>
         </button>
         <div class="accordion-content hidden mt-2 text-gray-600">
-<!-- //TODO <img src="" alt="">     -->
-
-          <p>با تکیه بر تجربه و دانش تیم ما، رویدادهای شما به فرصتی برای ایجاد ارتباطات ارزشمند، معرفی مؤثر برند و انتقال پیام‌های کلیدی تبدیل می‌شوند. از انتخاب مکان مناسب و برنامه‌ریزی محتوای جذاب گرفته تا مدیریت حرفه‌ای اجرا و هماهنگی‌های پس از رویداد، ما تمامی مراحل را با نگاهی ۳۶۰ درجه پوشش می‌دهیم. با این سرویس، فضایی خلاقانه و به‌یادماندنی بسازید که مخاطبانتان را به تعامل، یادگیری و ایجاد فرصت‌های جدید ترغیب کند
+          <!-- //TODO <img src="" alt="">     -->
+          <p>طراحی وب سایت، بر نحوه درک مخاطب از برند شما تاثیر می‌گذارد. یک وب سایت خوب می‌تواند بازدیدکنندگان بیشتری
+            جذب کرده و آنها را تشویق کند تا با محتوای تولید کسب و کار تعامل داشته باشند
           </p>
           <br>
           <br>
           <div class="flex justify-center items-center">
-            <a href="services-events.html"><button class="text-white py-2 px-10 rounded-md text-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400" style="background-color: #27AAE1;">
-              بیشتر بدانید
-            </button></a>
+            <a href="services-webdesign.html"><button
+                class="text-white py-2 px-10 rounded-md text-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                style="background-color: #27AAE1;">
+                بیشتر بدانید
+              </button></a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <button class="w-full flex justify-between items-center">
+          <div class="flex items-center ml-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform ml-2"
+              viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z"
+                clip-rule="evenodd" />
+            </svg>
+            <span class="text-gray-800 font-bold">تحقیقات بازار</span>
+
+          </div>
+        </button>
+        <div class="accordion-content hidden mt-2 text-gray-600">
+          <!-- //TODO <img src="" alt="">     -->
+
+          <p>تحقیقات بازار برای درک نیازهای مصرف کننده، روندهای بازار و پویایی رقابت اهمیت بالایی دارد و شامل جمع آوری،
+            تجزیه و تحلیل، و تفسیر داده‌ها در مورد بازار، جهت تصمیم‌گیری‌های تجاری مانند توسعه محصول و استراتژی های
+            بازاریابی می‌شود
+          </p>
+          <br>
+          <br>
+          <div class="flex justify-center items-center">
+            <a href="sevices-marketresearch.html"><button
+                class="text-white py-2 px-10 rounded-md text-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                style="background-color: #27AAE1;">
+                بیشتر بدانید
+              </button></a>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <button class="w-full flex justify-between items-center">
+          <div class="flex items-center ml-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform ml-2"
+              viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z"
+                clip-rule="evenodd" />
+            </svg>
+            <span class="text-gray-800 font-bold">برگزاری رویداد های تخصصی و تعاملی </span>
+          </div>
+
+        </button>
+        <div class="accordion-content hidden mt-2 text-gray-600">
+          <!-- //TODO <img src="" alt="">     -->
+
+          <p>با تکیه بر تجربه و دانش تیم ما، رویدادهای شما به فرصتی برای ایجاد ارتباطات ارزشمند، معرفی مؤثر برند و
+            انتقال پیام‌های کلیدی تبدیل می‌شوند. از انتخاب مکان مناسب و برنامه‌ریزی محتوای جذاب گرفته تا مدیریت حرفه‌ای
+            اجرا و هماهنگی‌های پس از رویداد، ما تمامی مراحل را با نگاهی ۳۶۰ درجه پوشش می‌دهیم. با این سرویس، فضایی
+            خلاقانه و به‌یادماندنی بسازید که مخاطبانتان را به تعامل، یادگیری و ایجاد فرصت‌های جدید ترغیب کند
+          </p>
+          <br>
+          <br>
+          <div class="flex justify-center items-center">
+            <a href="services-events.html"><button
+                class="text-white py-2 px-10 rounded-md text-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                style="background-color: #27AAE1;">
+                بیشتر بدانید
+              </button></a>
           </div>
         </div>
       </div>
       <div class="bg-white p-4 rounded-lg shadow-md">
         <button class="w-full flex justify-between items-center">
-          <span class="text-gray-800 font-bold"> تبلیغات</span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z" clip-rule="evenodd" />
-          </svg>
+          <div class="flex items-center ml-auto">
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform ml-2"
+              viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z"
+                clip-rule="evenodd" />
+            </svg>
+            <span class="text-gray-800 font-bold"> تبلیغات</span>
+          </div>
         </button>
         <div class="accordion-content hidden mt-2 text-gray-600">
-     <!-- //TODO <img src="" alt="">     -->
+          <!-- //TODO <img src="" alt="">     -->
 
-          <p>این فرآیند، شامل معرفی محصولات یا خدمات کسب و کار در کانال‌های مختلف از جمله، تبلیغات تلویزیونی، رادیویی، چاپی، آنلاین و تبلیغات در فضای باز است. تبلیغات موثر با مخاطبان هدف ارتباط برقرار می‌کند و آنها را به استفاده از محصولات یا خدمات ترغیب کرده و سهم بازار و درآمد را افزایش می‌دهد
+          <p>این فرآیند، شامل معرفی محصولات یا خدمات کسب و کار در کانال‌های مختلف از جمله، تبلیغات تلویزیونی، رادیویی،
+            چاپی، آنلاین و تبلیغات در فضای باز است. تبلیغات موثر با مخاطبان هدف ارتباط برقرار می‌کند و آنها را به
+            استفاده از محصولات یا خدمات ترغیب کرده و سهم بازار و درآمد را افزایش می‌دهد
           </p>
           <br>
           <br>
           <div class="flex justify-center items-center">
-            <a href="services-advertisment.html"><button class="text-white py-2 px-10 rounded-md text-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400" style="background-color: #27AAE1;">
-              بیشتر بدانید
-            </button></a>
+            <a href="services-advertisment.html"><button
+                class="text-white py-2 px-10 rounded-md text-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                style="background-color: #27AAE1;">
+                بیشتر بدانید
+              </button></a>
           </div>
         </div>
       </div>
       <div class="bg-white p-4 rounded-lg shadow-md">
         <button class="w-full flex justify-between items-center">
-          <span class="text-gray-800 font-bold">ترویج فروش </span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z" clip-rule="evenodd" />
-          </svg>
+          <div class="flex items-center ml-auto">
+
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform ml-2"
+              viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z"
+                clip-rule="evenodd" />
+            </svg>
+            <span class="text-gray-800 font-bold">ترویج فروش </span>
+          </div>
         </button>
         <div class="accordion-content hidden mt-2 text-gray-600">
-   <!-- //TODO <img src="" alt="">     -->
+          <!-- //TODO <img src="" alt="">     -->
 
           <p>ترویج فروش، شامل ایجاد سازوکارهایی است که مشتریان را برای استفاده از محصولات یا خدمات ترغیب می‌کند
           </p>
           <br>
           <br>
           <div class="flex justify-center items-center">
-            <a href="services-salespromotion.html"><button class="text-white py-2 px-10 rounded-md text-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400" style="background-color: #27AAE1;">
-              بیشتر بدانید
-            </button></a>
+            <a href="services-salespromotion.html"><button
+                class="text-white py-2 px-10 rounded-md text-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                style="background-color: #27AAE1;">
+                بیشتر بدانید
+              </button></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <button class="w-full flex justify-between items-center">
+          <div class="flex items-center ml-auto">
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform ml-2"
+              viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z"
+                clip-rule="evenodd" />
+            </svg>
+            <span class="text-gray-800 font-bold">روابط عمومی </span>
+
+          </div>
+        </button>
+        <div class="accordion-content hidden mt-2 text-gray-600">
+          <!-- //TODO <img src="" alt="">     -->
+
+          <p>روابط عمومی شامل مدیریت انتشار اطلاعات بین کسب و کار و بازار می‌شود و هدف آن ایجاد و حفظ تصویر مثبت از کسب
+            و کار و ایجاد ارتباط قوی با مخاطبان است
+          </p>
+          <br>
+          <br>
+          <div class="flex justify-center items-center">
+            <a href="services-communication.html"><button
+                class="text-white py-2 px-10 rounded-md text-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                style="background-color: #27AAE1;">
+                بیشتر بدانید
+              </button></a>
           </div>
         </div>
       </div>
       <div class="bg-white p-4 rounded-lg shadow-md">
         <button class="w-full flex justify-between items-center">
-          <span class="text-gray-800 font-bold">روابط عمومی </span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z" clip-rule="evenodd" />
-          </svg>
+          <div class="flex items-center ml-auto">
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform ml-2"
+              viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z"
+                clip-rule="evenodd" />
+            </svg>
+            <span class="text-gray-800 font-bold">آموزش و توجیه پرسنل </span>
+
+          </div>
+
         </button>
         <div class="accordion-content hidden mt-2 text-gray-600">
-                    <!-- //TODO <img src="" alt="">     -->
+          <!-- //TODO <img src="" alt="">     -->
 
-          <p>روابط عمومی شامل مدیریت انتشار اطلاعات بین کسب و کار و بازار می‌شود و هدف آن ایجاد و حفظ تصویر مثبت از کسب و کار و ایجاد ارتباط قوی با مخاطبان است
+          <p>آموزش مستمر کارکنان به جهت حفظ و بهبود استانداردهای عملکردی و انطباق با شرایط متغیر بازار بسیار مهم است.
+            تربیت نیروی کار آگاه به کسب‌و‌کار این امکان را می‌دهد تا از طریق افزایش کارایی و نوآوری به اهداف استراتژیک
+            خود دست پیدا کند
           </p>
           <br>
           <br>
           <div class="flex justify-center items-center">
-            <a href="services-communication.html"><button class="text-white py-2 px-10 rounded-md text-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400" style="background-color: #27AAE1;">
-              بیشتر بدانید
-            </button></a>
+            <a href="services-justification.html"><button
+                class="text-white py-2 px-10 rounded-md text-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                style="background-color: #27AAE1;">
+                بیشتر بدانید
+              </button></a>
           </div>
         </div>
       </div>
+
       <div class="bg-white p-4 rounded-lg shadow-md">
         <button class="w-full flex justify-between items-center">
-          <span class="text-gray-800 font-bold">آموزش و توجیه پرسنل  </span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z" clip-rule="evenodd" />
-          </svg>
+          <div class="flex items-center ml-auto">
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform ml-2"
+              viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z"
+                clip-rule="evenodd" />
+            </svg>
+            <span class="text-gray-800 font-bold">جذب و نگاهداشت سرمایه های فکری </span>
+
+          </div>
+
         </button>
         <div class="accordion-content hidden mt-2 text-gray-600">
-                    <!-- //TODO <img src="" alt="">     -->
+          <!-- //TODO <img src="" alt="">     -->
 
-          <p>آموزش مستمر کارکنان به جهت حفظ و بهبود استانداردهای عملکردی و انطباق با شرایط متغیر بازار بسیار مهم است. تربیت نیروی کار آگاه به کسب‌و‌کار این امکان را می‌دهد تا از طریق افزایش کارایی و نوآوری به اهداف استراتژیک خود دست پیدا کند
+          <p>سرمایه‌های فکری، یکی از منابع کلیدی در اقتصاد دانش‌بنیان هستند. جذب و حفظ افراد با استعداد، ایده‌های
+            نوآورانه و تخصص لازم جهت رشد را در اختیار کسب‌و‌کارها قرار می‌دهد
           </p>
           <br>
           <br>
           <div class="flex justify-center items-center">
-            <a href="services-justification.html"><button class="text-white py-2 px-10 rounded-md text-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400" style="background-color: #27AAE1;">
-              بیشتر بدانید
-            </button></a>
-          </div>        </div>
-      </div>
-      <div class="bg-white p-4 rounded-lg shadow-md">
-        <button class="w-full flex justify-between items-center">
-          <span class="text-gray-800 font-bold">جذب و نگاهداشت سرمایه های فکری  </span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z" clip-rule="evenodd" />
-          </svg>
-        </button>
-        <div class="accordion-content hidden mt-2 text-gray-600">
-                    <!-- //TODO <img src="" alt="">     -->
-
-          <p>سرمایه‌های فکری، یکی از منابع کلیدی در اقتصاد دانش‌بنیان هستند. جذب و حفظ افراد با استعداد، ایده‌های نوآورانه و تخصص لازم جهت رشد را در اختیار کسب‌و‌کارها قرار می‌دهد
-          </p>
-          <br>
-          <br>
-          <div class="flex justify-center items-center">
-            <a href="sevrices-intellectual capital.html"><button class="text-white py-2 px-10 rounded-md text-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400" style="background-color: #27AAE1;">
-              بیشتر بدانید
-            </button></a>
+            <a href="sevrices-intellectual capital.html"><button
+                class="text-white py-2 px-10 rounded-md text-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                style="background-color: #27AAE1;">
+                بیشتر بدانید
+              </button></a>
           </div>
         </div>
       </div>
@@ -286,25 +388,25 @@
   </main>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const accordionItems = document.querySelectorAll(".bg-white"); 
-  
+      const accordionItems = document.querySelectorAll(".bg-white");
+
       accordionItems.forEach((item) => {
         const button = item.querySelector("button");
         const accordionContent = item.querySelector(".accordion-content");
         const icon = button.querySelector("svg");
-  
-      
-  
+
+
+
         button.addEventListener("click", (event) => {
           toggleAccordion(accordionContent, icon);
         });
       });
-  
+
       function toggleAccordion(accordionContent, icon) {
         if (accordionContent.classList.contains("hidden")) {
           accordionContent.classList.remove("hidden");
           icon.classList.add("rotate-180");
-          icon.style.fill = "#27AAE1"; 
+          icon.style.fill = "#27AAE1";
         } else {
           accordionContent.classList.add("hidden");
           icon.classList.remove("rotate-180");
@@ -313,39 +415,40 @@
       }
     });
     function toggleAccordion(accordionContent, icon) {
-  if (accordionContent.classList.contains("hidden")) {
-    accordionContent.classList.remove("hidden");
-    accordionContent.classList.add("open"); 
-    icon.classList.add("rotate-180");
-    icon.style.fill = "#27AAE1"; 
-  } else {
-    accordionContent.classList.add("hidden");
-    accordionContent.classList.remove("open");  
-    icon.classList.remove("rotate-180");
-    icon.style.fill = ""; 
-  }
-}
+      if (accordionContent.classList.contains("hidden")) {
+        accordionContent.classList.remove("hidden");
+        accordionContent.classList.add("open");
+        icon.classList.add("rotate-180");
+        icon.style.fill = "#27AAE1";
+      } else {
+        accordionContent.classList.add("hidden");
+        accordionContent.classList.remove("open");
+        icon.classList.remove("rotate-180");
+        icon.style.fill = "";
+      }
+    }
 
     function goBack() {
       history.back();
     }
 
     const showMenuButton = document.getElementById('show-menu');
-        const menuContainer = document.getElementById('menu-container');
+    const menuContainer = document.getElementById('menu-container');
 
-        showMenuButton.addEventListener('click', async () => {
-            const response = await fetch('menu.html'); 
-            const menuHtml = await response.text();
+    showMenuButton.addEventListener('click', async () => {
+      const response = await fetch('menu.html');
+      const menuHtml = await response.text();
 
-            menuContainer.innerHTML = menuHtml;
+      menuContainer.innerHTML = menuHtml;
 
-            menuContainer.classList.remove('hidden');
-            menuContainer.classList.add('slide-up');
-        });
+      menuContainer.classList.remove('hidden');
+      menuContainer.classList.add('slide-up');
+    });
 
   </script>
-  
 
-  
+
+
 </body>
+
 </html>

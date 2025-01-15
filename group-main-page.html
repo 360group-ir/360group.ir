@@ -38,7 +38,7 @@
         <div class="main1 flex-1 flex flex-col justify-center items-center text-white">
             <!-- لوگو -->
             <div class="text-center">
-                <img class="w-[300px]" src="assets/svg/360  logo nahaeeeeeee-03 1.svg" alt="">
+                <img class="w-[300px] py-12" src="assets/svg/360  logo nahaeeeeeee-03 1.svg" alt="">
             </div>
             <!-- QR Code -->
             <div class="mt-6">
@@ -76,32 +76,39 @@
 
             <!-- آکاردئون 2 -->
             <div style="background-color: #fff;" class="border-b border-gray-200 mb-4">
+                <span id="icon-contact" class="transform transition-transform flex px-8" onclick="toggleAccordion('contact')"> 
+            <img src="assets/svg/Chevron.svg" class="chevron-icon pr-4" alt=""> 
+            <button class="w-full text-right py-4 text-lg font-black text-[#333336] flex justify-between items-center" > 
+        راه‌های ارتباطی 
+        
+    </button>
+        </span>
 
-                <button class="w-full text-right py-4 px-6 text-lg font-black text-[#333336] flex justify-between items-center" onclick="toggleAccordion('contact')">
-                    راه‌های ارتباطی
-                    <span id="icon-contact" class="transform transition-transform">
-                        <img src="assets/svg/Chevron.svg" class="chevron-icon" alt="">
-                    </span>
-                </button>
-                
+
                 <div id="contact" class="px-6 pb-4 text-gray-600">
-                    <div class="flex flex-wrap justify-center mx-auto">
-                        <a href="mailto:info@360group.ir;" class="mb-4 sm:mb-0 sm:mx-6">
-                            <img class="w-16 sm:w-20 mx-auto" src="assets/svg/button-icon.svg" alt="">
+                    <div class="flex flex-nowrap overflow-x-auto justify-center gap-6 sm:gap-8 lg:gap-12 mx-auto">
+                        <!-- First Icon -->
+                        <a href="mailto:info@360group.ir;" class="shrink-0">
+                            <img class="w-16 sm:w-20 lg:w-24 mx-auto" src="assets/svg/button-icon.svg" alt="">
                         </a>
-                        <a href="" target="_blank" class="mb-4 sm:mb-0 sm:mx-6">
-                            <img class="w-16 sm:w-20 mx-auto" src="assets/svg/button-icon2.svg" alt="">
+                        <!-- Second Icon -->
+                        <a href="" target="_blank" class="shrink-0">
+                            <img class="w-16 sm:w-20 lg:w-24 mx-auto" src="assets/svg/button-icon2.svg" alt="">
                         </a>
-                        <a href="" class="mb-4 sm:mb-0 sm:mx-6">
-                            <img class="w-16 sm:w-20 mx-auto" src="assets/svg/button-icon3.svg" alt="">
+                        <!-- Third Icon -->
+                        <a href="" class="shrink-0">
+                            <img class="w-16 sm:w-20 lg:w-24 mx-auto" src="assets/svg/button-icon3.svg" alt="">
                         </a>
-                        <a href="" class="mb-4 sm:mb-0 sm:mx-6">
-                            <img class="w-16 sm:w-20 mx-auto" src="assets/svg/button-icon4.svg" alt="">
-
+                        <!-- Fourth Icon -->
+                        <a href="" class="shrink-0">
+                            <img class="w-16 sm:w-20 lg:w-24 mx-auto" src="assets/svg/button-icon4.svg" alt="">
                         </a>
                     </div>
                 </div>
             </div>
+
+
+
 
             <!-- آکاردئون 3 -->
             <div class="bg-[#fff] border-b border-gray-200 mb-4 px-8">
