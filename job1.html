@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.cdnfonts.com/css/vazirmatn" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <title>Document</title>
+    <title>360 Group</title>
 </head>
 
 <body class="bg-[#F6F6F7]">
@@ -25,13 +25,17 @@
                 </button>
                 <!-- دکمه بازگشت -->
 
-                <button class="text-2xl">
-                    <a href="group-job-offers.html">
-                        <img src="assets/svg/Chevron left.svg" alt="" class="ml-3 my-6 w-6 h-6 hover:cursor-pointer">
-                    </a>
-                </button>
-            </div>
-        </nav>
+                <button class="text-2xl" onclick="goBack()">
+                    <img src="assets/svg/Chevron left.svg" alt="" class="ml-3 my-5 w-[25px] h-[25px] hover:cursor-pointer">
+
+            </button>
+        </div>
+    </nav>
+    <script>
+        function goBack() {
+          history.back();
+        }
+      </script>
         <hr class="hr h-[.6px] bg-red-900">
 
     </header>

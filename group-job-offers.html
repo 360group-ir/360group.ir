@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="./output.css" rel="stylesheet">
 
-    <title>فرصت‌های شغلی</title>
+    <title>360 Group</title>
 </head>
 
 <body style="background-color: #F5F5F7;" class="h-screen flex flex-col">
@@ -24,18 +24,25 @@
                     </a>
                 </button>
                 <!-- دکمه بازگشت -->
-                <button class="text-2xl">
-                    <a href="group-main-page.html">
-                        <img src="assets/svg/Chevron left.svg" alt="بازگشت" class="ml-3 my-5 w-[25px] h-[25px] hover:cursor-pointer">
-                    </a>
+                <button class="text-2xl" onclick="goBack()">
+                    <img src="assets/svg/Chevron left.svg" alt=""
+                        class="ml-3 my-5 w-[25px] h-[25px] hover:cursor-pointer">
+
                 </button>
             </div>
         </nav>
+        <script>
+            function goBack() {
+                history.back();
+            }
+        </script>
+        <br>
+        <br>
         <!-- بخش بالایی با لوگو و QR Code -->
         <div class="main1 flex-1 flex flex-col justify-center items-center text-white">
             <!-- لوگو -->
             <div class="text-center">
-                <img class="w-[300px] py-12" src="assets/svg/360  logo nahaeeeeeee-03 1.svg" alt="لوگو">
+                <img class="w-[300px] py-4" src="assets/svg/360  logo nahaeeeeeee-03 1.svg" alt="لوگو">
             </div>
             <!-- QR Code -->
             <div class="mt-6">
@@ -52,24 +59,31 @@
                 <h1 class="py-5 font-bold text-2xl">فرصت‌های شغلی</h1>
 
                 <p class="font-thin text-sm leadi">
-                    در تیم ما، رشد و یادگیری نه یک گزینه، بلکه بخشی از مسیر شماست. اینجا جایی است که با همکاری نزدیک با افراد حرفه‌ای در حوزه‌های مختلف، می‌توانید استعدادهای خود را شکوفا کنید<br> و با ایده‌ها و دیدگاه‌های نوآورانه خود، تاثیر مثبتی بر
-                    آینده بگذارید. به ارزش‌های شما احترام می‌گذاریم و محیطی فراهم کرده‌ایم که هم تعادل زندگی و کار و هم شادی و رضایت شما در اولویت باشد.
-                    <br> اگر مشتاقید تا در فضایی حمایتگر، با انرژی و با همدلی کار کنید و فرصت‌های پیش‌رو را به فرصت‌های بزرگ‌تر برای خود و دیگران تبدیل کنید، ما منتظر شما هستیم. بیایید با هم، آینده را<br> بسازیم!
+                    در تیم ما، رشد و یادگیری نه یک گزینه، بلکه بخشی از مسیر شماست. اینجا جایی است که با همکاری نزدیک با
+                    افراد حرفه‌ای در حوزه‌های مختلف، می‌توانید استعدادهای خود را شکوفا کنید<br> و با ایده‌ها و
+                    دیدگاه‌های نوآورانه خود، تاثیر مثبتی بر
+                    آینده بگذارید. به ارزش‌های شما احترام می‌گذاریم و محیطی فراهم کرده‌ایم که هم تعادل زندگی و کار و هم
+                    شادی و رضایت شما در اولویت باشد.
+                    <br> اگر مشتاقید تا در فضایی حمایتگر، با انرژی و با همدلی کار کنید و فرصت‌های پیش‌رو را به فرصت‌های
+                    بزرگ‌تر برای خود و دیگران تبدیل کنید، ما منتظر شما هستیم. بیایید با هم، آینده را<br> بسازیم!
                 </p>
 
                 <!-- آکاردئون -->
-                <div class="border-b border-gray-200 mb-4 my-5 rounded-[8px] bg-[#fff] px-7" onclick="toggleAccordion('contact')">
+                <div class="border-b border-gray-200 mb-4 my-5 rounded-[8px] bg-[#fff] px-7"
+                    onclick="toggleAccordion('contact')">
                     <span id="icon-contact" class="transform transition-transform flex items-center mb-5">
-                            <img src="assets/svg/Chevron.svg" class="chevron-icon pr-2" alt="فلش">
-                            <button class="w-full text-right py-2 text-lg font-black text-[#333336] flex justify-between items-center" >
-                        دپارتمان فروش                        
-                        
-                    </button>
-                        </span>
+                        <img src="assets/svg/Chevron.svg" class="chevron-icon pr-2" alt="فلش">
+                        <button
+                            class="w-full text-right py-2 text-lg font-black text-[#333336] flex justify-between items-center">
+                            دپارتمان فروش
+
+                        </button>
+                    </span>
 
                     <div id="contact" class=" flex pb-2 text-gray-600 ">
                         <a href="job1.html" class=" m-auto flex">
-                            <button class="rounded-[8px] bg-[#f5f5f5] text-[#333336] border-[.8px] w-full py-3 px-28 sm:py-3 sm:px-32 sm:border border-black font-semibold mb-3 m-auto inline-flex justify-center items-center whitespace-nowrap">
+                            <button
+                                class="rounded-[8px] bg-[#f5f5f5] text-[#333336] border-[.8px] w-full py-3 px-28 sm:py-3 sm:px-32 sm:border border-black font-semibold mb-3 m-auto inline-flex justify-center items-center whitespace-nowrap">
                                 بازاریاب تلفنی
                             </button>
 
@@ -80,7 +94,8 @@
                 </div>
                 <span class="flex">
                     <a class="m-auto" href="request.html">
-                        <button class="btn-2 py-3 px-14  my-1 m-auto " style="font-weight: bolder;">به ما بپیوندید</button>
+                        <button class="btn-2 py-3 px-14  my-1 m-auto " style="font-weight: bolder;">به ما
+                            بپیوندید</button>
                     </a>
                 </span>
 
