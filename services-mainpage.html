@@ -35,6 +35,28 @@
     .slide-up {
       animation: slideUp 0.5s ease-out forwards;
     }
+   
+/* Menu Styling */
+.menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #27AAE1;
+  color: white;
+  z-index: 50;
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Active state (menu visible) */
+.menu.active {
+  transform: translateY(0);
+}
+
+
+
   </style>
 </head>
 
@@ -42,25 +64,43 @@
   <!-- Header -->
   <br>
   <br>
-  <header class="text-white py-4 fixed top-0 left-0 w-full z-50" style="background-color: #27AAE1;">
+  <header class="text-white fixed top-0 left-0 w-full z-50" style="background-color: #27AAE1;">
     <!-- Chevron Button -->
-    <button class="absolute top-4 left-6" onclick="goBack()">
-      <img src="assets/svg/Chevron left.svg" alt="Go Back" class="w-[25px] h-[25px] hover:cursor-pointer">
-    </button>
-
-    <script>
-      function goBack() {
-        history.back();
-      }
-    </script>
-
-    <!-- Menu Toggle -->
-    <div class="container mx-auto flex justify-between items-center px-4">
-      <button id="show-menu" class="px-4 py-2  text-white rounded-lg " style="background-color: #27AAE1;">
-        <a href="menu-service.html"><img src="assets/svg/Menu.svg" alt="منو" class="w-[25px] h-[25px]"></a>
+    <div class="main1 flex justify-between items-center px-4 py-2">
+      <button id="menu-toggle" class="text-2xl">
+          <a href="menu-service.html">
+              <img src="assets/svg/Menu.svg" alt="" class="mr-3  w-[25px] h-[25px]">
+          </a>
       </button>
-    </div>
+      <button class="text-2xl" onclick="goBack()">
+              <img src="assets/svg/Chevron left.svg" alt="" class="ml-3 my-5 w-[25px] h-[25px] hover:cursor-pointer">
+      </button>
+  </div>
   </header>
+
+
+      <!--menu-->
+      <div id="menu-container" 
+      class="fixed inset-x-0 bottom-0 bg-white text-gray-800 p-6 transform translate-y-full shadow-lg rounded-t-lg">
+        <header class="p-4 flex justify-between items-center bg-white text-[#27AAE1]">
+          <h2 class="text-xl font-bold">منو</h2>
+          <button id="close-menu" class="text-lg bg-red-500 text-white px-4 py-2 rounded">
+            بستن
+          </button>
+        </header>
+        <nav class="flex flex-col items-center justify-center text-white text-lg space-y-4 mt-6">
+          <a href="index.html">صفحه اصلی</a>
+          <a href="group-main-page.html">گروه 360</a>
+          <a href="#">خدمات 360</a>
+          <a href="https://360tools.io/auth/login">ابزار 360</a>
+          <a href="group-job-offers.html">فرصت‌های شغلی</a>
+          <a href="contact-us.html">ارتباط با ما</a>
+        </nav>
+      </div>
+      
+
+      
+
 
   <br>
   <!-- Content -->
@@ -433,18 +473,36 @@
       history.back();
     }
 
-    const showMenuButton = document.getElementById('show-menu');
-    const menuContainer = document.getElementById('menu-container');
+    document.addEventListener("DOMContentLoaded", () => {
+  const menuContainer = document.getElementById("menu-container");
+  const menuToggle = document.getElementById("menu-toggle");
+  const closeMenu = document.getElementById("close-menu");
 
-    showMenuButton.addEventListener('click', async () => {
-      const response = await fetch('menu.html');
-      const menuHtml = await response.text();
+  menuToggle.addEventListener("click", () => {
+    menuContainer.classList.remove("translate-y-full");
+    menuContainer.classList.add("translate-y-0");
+  });
 
-      menuContainer.innerHTML = menuHtml;
+  closeMenu.addEventListener("click", () => {
+    menuContainer.classList.remove("translate-y-0");
+    menuContainer.classList.add("translate-y-full");
+  });
+});
+    const openMenu = document.getElementById('open-menu');
+    const closeMenu = document.getElementById('close-menu');
+    const menu = document.getElementById('menu');
 
-      menuContainer.classList.remove('hidden');
-      menuContainer.classList.add('slide-up');
+      openMenu.addEventListener('click', () => {
+      menu.classList.remove('translate-y-full');
+      menu.classList.add('slide-up');
     });
+
+    closeMenu.addEventListener('click', () => {
+      menu.classList.remove('slide-up');
+      menu.classList.add('translate-y-full');
+    });
+    
+
 
   </script>
 

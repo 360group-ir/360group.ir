@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes slideUp {
+      from {
+        transform: translateY(100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+    .slide-up {
+      animation: slideUp 0.5s ease-out forwards;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full bg-blue-500 text-white p-4 flex justify-between">
+    <button id="open-menu" class="text-lg bg-white text-blue-500 px-4 py-2 rounded">
+      Open Menu
+    </button>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex items-center justify-center h-screen">
+    <h1 class="text-3xl font-bold">Main Page Content</h1>
+  </main>
+
+  <!-- Menu Container -->
+  <div
+    id="menu"
+    class="fixed inset-x-0 bottom-0 bg-white text-gray-800 p-6 transform translate-y-full shadow-lg rounded-t-lg"
+  >
+    <header class="flex justify-between items-center mb-4">
+      <h2 class="text-xl font-bold">Menu</h2>
+      <button id="close-menu" class="text-lg bg-red-500 text-white px-4 py-2 rounded">
+        Close
+      </button>
+    </header>
+    <ul class="space-y-4">
+      <li><a href="#" class="block text-blue-500">Home</a></li>
+      <li><a href="#" class="block text-blue-500">Services</a></li>
+      <li><a href="#" class="block text-blue-500">Contact</a></li>
+    </ul>
+  </div>
+
+  <script>
+    const openMenu = document.getElementById('open-menu');
+    const closeMenu = document.getElementById('close-menu');
+    const menu = document.getElementById('menu');
+
+    openMenu.addEventListener('click', () => {
+      menu.classList.remove('translate-y-full');
+      menu.classList.add('slide-up');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      menu.classList.remove('slide-up');
+      menu.classList.add('translate-y-full');
+    });
+  </script>
+</body>
+</html>
