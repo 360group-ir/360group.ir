@@ -1,168 +1,217 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>خدمات 360</title>
   <link href="https://fonts.cdnfonts.com/css/vazirmatn" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="logo1.jpg" />
   <style>
     @font-face {
       font-family: 'Vazirmatn';
       font-style: normal;
-      font-weight: 400;
+      font-size: large;
+      font-weight: 600;
       src: local('Vazirmatn'), url('https://fonts.cdnfonts.com/s/107409/Vazirmatn[wght].woff') format('woff');
     }
+
     body {
       font-family: 'Vazirmatn', sans-serif;
     }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(100%);
+      }
+
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    .slide-up {
+      animation: slideUp 0.5s ease-out forwards;
+    }
+
+    
   </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-100 text-gray-800 overflow-x-hidden">
   <!-- Header -->
-   <br>
-   <br>
-  <header class="text-white py-4 fixed top-0 left-0 w-full z-50" style="background-color: #27AAE1;">
-    <!-- Chevron Button -->
-    <button class="absolute top-4 left-6" onclick="goBack()">
-      <img 
-        src="assets/svg/Chevron left.svg" 
-        alt="Go Back" 
-        class="w-[25px] h-[25px] hover:cursor-pointer"
-      >
-    </button>
-    
-    <script>
-      function goBack() {
-        history.back();
-      }
-    </script>
-  
-    <!-- Menu Toggle -->
-    <div class="container mx-auto flex justify-between items-center px-4">
+  <header class="text-white fixed top-0 left-0 w-full z-50 " style="background-color: #27AAE1;">
+    <div class="flex justify-between items-center px-4 py-2">
       <button id="menu-toggle" class="text-2xl">
-        <a href="menu-service.html"><img src="assets/svg/Menu.svg" alt="منو" class="w-[25px] h-[25px]"></a>
+        <a href="menu-service.html">
+          <img src="assets/svg/Menu.svg" alt="Menu" class="mr-3 my-5 w-[25px] h-[25px]">
+        </a>
+      </button>
+      <button class="text-2xl" onclick="goBack()">
+        <img src="assets/svg/Chevron left.svg" alt="Back" class="ml-3 my-5 w-[25px] h-[25px] hover:cursor-pointer">
       </button>
     </div>
   </header>
-  
-
-
- <!-- //TODO <video src=""></video> -->
-
-  <!-- Content -->
-  <main class="container mx-auto mt-8 px-4">
-    <a href="#" class="text-2xl font-extrabold">تبلیغات</a>
-
-
-<!-- Accordion Section -->
-    <div class="mt-6 space-y-4">
-      <!-- Accordion Items -->
-      <div class="bg-white p-4 rounded-lg shadow-md">
-        <button class="w-full flex justify-between items-center">
-          <span class="text-gray-800 font-bold">تعریف </span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z" clip-rule="evenodd" />
-          </svg>
-        </button>
-        <div class="accordion-content hidden mt-2 text-gray-600">
-            <p>
-                 
-
-تبلیغات به معنای اطلاع‌رسانی و ترویج یک محصول، خدمت یا ایده به‌منظور جذب توجه مخاطبان و تشویق آن‌ها به اقدام خاصی است. این فرآیند می‌تواند شامل روش‌های مختلفی مانند تبلیغات چاپی، دیجیتال، تلویزیونی یا محیطی باشد. هدف از تبلیغات ایجاد شناخت، ایجاد تمایل به خرید و در نهایت افزایش فروش است. در دنیای مدرن، تبلیغات علاوه بر ابزارهای سنتی، از فناوری‌های دیجیتال نظیر موتورهای جستجو، شبکه‌های اجتماعی و تبلیغات ویدئویی بهره می‌برد
-            </p>
-          </p>
+  <main class="w-full max-w-screen  mx-auto overflow-hidden flex items-start justify-center min-h-screen pt-20 px-4">
+    <!-- Container -->
+    <div class="flex flex-col lg:flex-row rounded-lg w-full max-w-6xl gap-6">
+      <!-- Right Section -->
+      <div class="w-full lg:w-1/2 flex flex-col" dir="rtl">
+        <br>
+        <br>
+        <a href="#" class="text-2xl font-extrabold self-start mb-4">تبلیغات</a>
+        <p class="text-gray-700 leading-relaxed text-sm sm:text-base">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می‌باشد. کتاب‌های زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می‌طلبد تا با نرم‌افزارها شناخت بیشتری را برای طراحان رایانه‌ای علی‌الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می‌توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساساً مورد استفاده قرار گیرد.
+        </p>
+       <!-- Accordion Section -->
+   <div class="mt-6 space-y-4">
+  <!-- تعریف -->
+  <div class="tarif">
+    <div class="bg-white p-4 rounded-lg shadow-md">
+      <button class="w-full flex justify-between items-center">
+        <div class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform ml-2"
+          viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z"
+            clip-rule="evenodd" />
+        </svg>
+          <span class="text-gray-800 font-bold">تعریف</span>
         </div>
+      </button>
+      
+      <div class="accordion-content hidden mt-2 text-gray-600">
+        <p>
+          تبلیغات به معنای اطلاع‌رسانی و ترویج یک محصول، خدمت یا ایده به‌منظور جذب توجه مخاطبان و تشویق آن‌ها به اقدام خاصی است. این فرآیند می‌تواند شامل روش‌های مختلفی مانند تبلیغات چاپی، دیجیتال، تلویزیونی یا محیطی باشد. هدف از تبلیغات ایجاد شناخت، ایجاد تمایل به خرید و در نهایت افزایش فروش است. در دنیای مدرن، تبلیغات علاوه بر ابزارهای سنتی، از فناوری‌های دیجیتال نظیر موتورهای جستجو، شبکه‌های اجتماعی و تبلیغات ویدئویی بهره می‌برد
+
+        </p>
       </div>
+    </div>
+  </div>
+  <!-- دلایل اهمیت برندینگ -->
+  <div class="ahamiat">
+    <div class="bg-white p-4 rounded-lg shadow-md">
+      <button class="w-full flex justify-between items-center">
+        <div class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform ml-2"
+          viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z"
+            clip-rule="evenodd" />
+        </svg>
+          <span class="text-gray-800 font-bold"> دلایل اهمیت تبلیغات </span>
+        </div>
+      </button>
+      <div class="accordion-content hidden mt-2 text-gray-600">
+        <p>
+          تبلیغات بخش جدایی‌ناپذیر از استراتژی بازاریابی هر کسب‌وکاری است. تبلیغات مؤثر به شناخته‌شدن برند، جذب مشتریان جدید و افزایش فروش منجر می‌شود. در دنیای پررقابت امروز، تبلیغات به یکی از مهم‌ترین ابزارها برای برجسته‌کردن محصولات و خدمات تبدیل شده است. براساس تحقیقات: 
+          - 60 درصد از کاربران خرید خود را پس از دیدن تبلیغات آنلاین انجام می‌دهند. 
+          - 80 درصد از کسب‌وکارها معتقدند تبلیغات هدفمند کلید اصلی موفقیت آنها در جذب مشتری است.    
+               </p>
 
-      <div class="bg-white p-4 rounded-lg shadow-md">
-        <button class="w-full flex justify-between items-center">
-          <span class="text-gray-800 font-bold">دلایل اهمیت تبلیغات </span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z" clip-rule="evenodd" />
-          </svg>
-        </button>
-        <div class="accordion-content hidden mt-2 text-gray-600">
-            <p>
-                
-تبلیغات بخش جدایی‌ناپذیر از استراتژی بازاریابی هر کسب‌وکاری است. تبلیغات مؤثر به شناخته‌شدن برند، جذب مشتریان جدید و افزایش فروش منجر می‌شود. در دنیای پررقابت امروز، تبلیغات به یکی از مهم‌ترین ابزارها برای برجسته‌کردن محصولات و خدمات تبدیل شده است. براساس تحقیقات: 
-
-- 60 درصد از کاربران خرید خود را پس از دیدن تبلیغات آنلاین انجام می‌دهند. 
-- 80 درصد از کسب‌وکارها معتقدند تبلیغات هدفمند کلید اصلی موفقیت آنها در جذب مشتری است. 
-            </p>
       </div>
+    </div>
+  </div>
+  <!-- اصطلاحات کلیدی -->
+  <div class="key">
+    <div class="bg-white p-4 rounded-lg shadow-md">
+      <button class="w-full flex justify-between items-center">
+        <div class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform ml-2"
+          viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z"
+            clip-rule="evenodd" />
+        </svg>
+          <span class="text-gray-800 font-bold">اصطلاحات کلیدی</span>
+        </div>
+      </button>
+      <div class="accordion-content hidden mt-2 text-gray-600">
+        <p>
+
+          -هدف‌گذاری (Targeting):انتخاب گروه خاصی از افراد که بیشترین احتمال را دارند تا به تبلیغات پاسخ دهند. 
+          
+          -تبلیغات دیجیتال: نوعی از تبلیغات که از پلتفرم‌های آنلاین مانند وب‌سایت‌ها، شبکه‌های اجتماعی و اپلیکیشن‌ها استفاده می‌کند. 
+          
+          -پیام تبلیغاتی: محتوا یا متنی که به‌منظور جذب مخاطبان به‌صورت خلاقانه طراحی شده است. 
+          
+                  </p>
       </div>
-
-      <div class="bg-white p-4 rounded-lg shadow-md">
-        <button class="w-full flex justify-between items-center">
-          <span class="text-gray-800 font-bold"> اصطلاحات کلیدی </span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500 transition-transform" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06-.02L10 10.94l3.71-3.75a.75.75 0 111.08 1.04l-4.25 4.29a.75.75 0 01-1.06 0L5.25 8.25a.75.75 0 01-.02-1.04z" clip-rule="evenodd" />
-          </svg>
-        </button>
-        <div class="accordion-content hidden mt-2 text-gray-600">
-            <p>
-                 
-
-- **هدف‌گذاری (Targeting):** انتخاب گروه خاصی از افراد که بیشترین احتمال را دارند تا به تبلیغات پاسخ دهند. 
-
-- **تبلیغات دیجیتال:** نوعی از تبلیغات که از پلتفرم‌های آنلاین مانند وب‌سایت‌ها، شبکه‌های اجتماعی و اپلیکیشن‌ها استفاده می‌کند. 
-
-- **پیام تبلیغاتی:** محتوا یا متنی که به‌منظور جذب مخاطبان به‌صورت خلاقانه طراحی شده است. 
-            </p>
-        
+    </div>
+  </div>
+</div>
+        <div class="flex justify-center  mt-6">
+          <a href="./services-contactus.html">
+            <button
+              class="text-white py-2 px-6 rounded-md text-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400" style="background-color: #27AAE1;">
+              دریافت مشاوره رایگان
+            </button>
+          </a>
         </div>
       </div>
       
-      <div class="flex justify-center items-center">
-        <a href="./services-contactus.html"><button class="text-white py-2 px-6 rounded-md text-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400" style="background-color: #27AAE1;">
-           دریافت مشاوره رایگان
-        </button></a>
+      <div class="w-full lg:w-1/2 flex flex-col mt-20 px-4">
+        <!-- Title for Mobile -->
+        <h2 class="self-start text-2xl font-extrabold text-gray-700 mb-4 lg:hidden">
+          ویدئو مرتبط
+        </h2>
+        <div class="rounded-lg shadow-xl w-full h-auto flex justify-center items-center lg:max-h-[500px]" style="box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);">
+          <!-- Embed Aparat Video -->
+          <iframe 
+            src=""
+            class="w-full h-[480px] rounded-lg"
+            frameborder="0" 
+            allow="autoplay ; fullscreen"
+            allowfullscreen>
+          </iframe>
+        </div>
       </div>
-
-
-
-
-
-      </div>
-
-    </div>
+      
+      
   </main>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const accordionItems = document.querySelectorAll(".bg-white"); // Target the entire box
-  
+      const accordionItems = document.querySelectorAll(".bg-white");
+
       accordionItems.forEach((item) => {
         const button = item.querySelector("button");
         const accordionContent = item.querySelector(".accordion-content");
         const icon = button.querySelector("svg");
-  
-        item.addEventListener("click", (event) => {
-          if (event.target === button) return;
-  
-          toggleAccordion(accordionContent, icon);
-        });
-  
-        button.addEventListener("click", (event) => {
-          toggleAccordion(accordionContent, icon);
+        button.addEventListener("click", () => {
+          if (accordionContent.classList.contains("hidden")) {
+            accordionContent.classList.remove("hidden");
+            icon.classList.add("rotate-180");
+          } else {
+            accordionContent.classList.add("hidden");
+            icon.classList.remove("rotate-180");
+          }
         });
       });
-  
-      function toggleAccordion(accordionContent, icon) {
-        if (accordionContent.classList.contains("hidden")) {
-          accordionContent.classList.remove("hidden");
-          icon.classList.add("rotate-180");
-          icon.style.fill = "#27AAE1"; // Turn the arrow blue
-        } else {
-          accordionContent.classList.add("hidden");
-          icon.classList.remove("rotate-180");
-          icon.style.fill = ""; // Reset arrow color
-        }
-      }
     });
-  </script>
-  
+    function toggleAccordion(accordionContent, icon) {
+      if (accordionContent.classList.contains("hidden")) {
+        accordionContent.classList.remove("hidden");
+        accordionContent.classList.add("open");
+        icon.classList.add("rotate-180");
+        icon.style.fill = "#27AAE1";
+      } else {
+        accordionContent.classList.add("hidden");
+        accordionContent.classList.remove("open");
+        icon.classList.remove("rotate-180");
+        icon.style.fill = "";
+      }
+    }
 
-  
+
+    function goBack() {
+      history.back();
+    }
+    function goBack() {
+    console.log('Button clicked');
+    window.history.back();
+  }
+  </script>
 </body>
+
 </html>
+
+
