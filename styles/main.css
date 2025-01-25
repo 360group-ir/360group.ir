@@ -84,14 +84,17 @@
     .btn-1 {
         background-color: #fff;
         color: #333336;
-        border-radius: 19px;
+        border-radius: 20px;
+        width: 192px;
+        height: 48px;
         font-family: 'Vazirmatn', sans-serif;
         font-weight: 600;
         box-shadow: rgb(0, 0, 0, 0.5);
-        text-decoration: none;
-        padding: 10px 20px;
-        display: inline-block;
-        margin-top: 20px;
+        background: #FFF;
+        padding: var(--space-4, 4px) var(--space-24, 24px);
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
     }
     
     .btn-1:hover {
@@ -168,10 +171,5 @@
                 padding: 12px 30px;
             }
         }
-        .swiper-pagination-bullet {
-            @apply w-2.5 h-2.5 bg-white mx-1.5 rounded-full;
-        }
-        .swiper-pagination-bullet-active {
-            @apply bg-white transform scale-125 opacity-100;
-        }
+        
     }
