@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.cdnfonts.com/css/vazirmatn" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="src/output.css" rel="stylesheet">
+
+    <title>360 Group</title>
+    <style>
+        /* پیش‌فرض: مخفی */
+        
+        #menu {
+            display: none;
+            transform: translateY(100%);
+            transition: transform 1s ease-in-out;
+        }
+        /* نمایش منو */
+        
+        #menu.show {
+            display: block;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body style="background-color: #F5F5F7;" class="h-screen flex flex-col">
+    <header>
+        <nav class="w-full bg-[#CB202A] fixed top-0 left-0 z-50">
+            <!-- نوار بالایی با دکمه بازگشت و منوی همبرگری -->
+            <div class="main1 flex justify-between items-center px-4 py-2">
+                <!-- دکمه منوی همبرگری -->
+                <button id="menu-toggle" class="text-2xl">
+                    <img src="assets/svg/Menu.svg" alt="Menu" class="mr-3 my-5 w-[25px] h-[25px]">
+                </button>
+                <!-- دکمه بازگشت -->
+                <button class="text-2xl">
+                    <a href="slider.html">
+                        <img src="assets/svg/Chevron left.svg" alt="Back" class="ml-3 my-5 w-[25px] h-[25px] hover:cursor-pointer">
+                    </a>
+                </button>
+            </div>
+        </nav>
+        <!-- بخش بالایی با لوگو و QR Code -->
+        <div class="main1 flex-1 flex flex-col justify-center items-center text-white">
+            <!-- لوگو -->
+            <div class="text-center">
+                <img class="w-[300px] py-12" src="assets/svg/360  logo nahaeeeeeee-03 1.svg" alt="">
+            </div>
+            <!-- QR Code -->
+            <div class="mt-6 sm:hidden">
+                <img src="assets/svg/Group.svg" alt="QR Code" class="h-28 w-28 m-5">
+            </div>
+
+    </header>
+
+    <!-- بخش منوی بازشو -->
+    <div id="menu" class="fixed bottom-0 left-0 w-full bg-white z-50">
+        <div class="p-4">
+            <!-- Header -->
+            <header class="w-full flex justify-between items-center px-4">
+                <!-- Back Button -->
+                <button onclick="goBackWithDelay()">
+            <img src="assets/svg/Chevron left.svg" alt="" class="ml-2 mt-5 w-7 h-7 hover:cursor-pointer">
+        </button>
+
+            </header>
+
+            <!-- Logo Section -->
+            <main class="flex flex-col items-center">
+                <img class="m-auto w-[190px]" src="assets/svg/360  logo nahaeeeeeee-03 1.svg" alt="">
+            </main>
+
+            <!-- Navigation Links -->
+            <nav class="flex flex-col items-center">
+                <a href="slider.html" class="mb-6 text-xl font-bold hover:cursor-pointer">صفحه اصلی</a>
+                <a href="group-main-page.html" class="my-6 text-xl font-bold hover:cursor-pointer">گروه ۳۶۰</a>
+                <a href="#" class="my-6 text-xl font-bold hover:cursor-pointer">خدمات ۳۶۰</a>
+                <!-- link to services page (nikta)-->
+                <a href="https://360tools.io/auth/login" class="my-6 text-xl font-bold hover:cursor-pointer">ابزار ۳۶۰</a>
+                <a href="group-job-offers.html" class="my-6 text-xl font-bold hover:cursor-pointer">فرصت‌های شغلی</a>
+                <a href="contact-us.html" class="my-6 text-xl font-bold hover:cursor-pointer">ارتباط با ما</a>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('menu-toggle');
+            const menu = document.getElementById('menu');
+            const closeMenu = document.getElementById('close-menu');
+
+            menuButton.addEventListener('click', () => {
+                menu.classList.add('show');
+                setTimeout(() => {
+                    menu.style.transform = 'translateY(0)';
+                }, 1000); // تاخیر 1 ثانیه برای نمایش انیمیشن
+            });
+
+            closeMenu.addEventListener('click', () => {
+                menu.style.transform = 'translateY(100%)';
+                setTimeout(() => {
+                    menu.classList.remove('show');
+                }, 1000); // مدت زمان متناسب با duration در transition
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -8,8 +8,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.cdnfonts.com/css/vazirmatn" rel="stylesheet">
 
-    <link rel="stylesheet" href="./styles/main.css">
 
+    <link rel="stylesheet" href="./styles/main.css">
+    <style>
+        .custom-shadow {
+            box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100">
@@ -22,14 +28,14 @@
 
                 <button id="menu-toggle" class="text-2xl">
                     <a href="menu.html">
-                        <img src="assets/svg/Menu.svg" alt="" class="mr-3 my-6 w-[30px] h-[30px]">
+                        <img src="assets/svg/Menu.svg" alt="" class="mr-3 my-3 sm:my-6 w-[25px] h-[25px]">
                     </a>
                 </button>
                 <!-- دکمه بازگشت -->
 
                 <button class="text-2xl">
                     <a href="group-job-offers.html">
-                        <img src="assets/svg/Chevron left.svg" alt="" class="ml-3 my-6 w-[30px] h-[30px] hover:cursor-pointer">
+                        <img src="assets/svg/Chevron left.svg" alt="" class="ml-3 my-3 sm:my-6 w-[25px] h-[25px] hover:cursor-pointer">
                     </a>
                 </button>
             </div>
@@ -40,37 +46,37 @@
 
     <section class="bg-[#F5F5F7]">
         <div class="py-20 px-4">
-            <div class="max-w-[1000px] mx-auto text-[#333336]">
-                <h1 class="py-5 font-bold text-2xl">ارتباط با ما</h1>
+            <div class="max-w-[1050px] mx-auto text-[#333336]">
+                <h1 class=" sm:pt-5 sm:pb-1 font-bold text-2xl">ارتباط با ما</h1>
 
                 <!-- آکاردئون -->
-                <div style="background-color: #fff; border-radius: 8px;" class="border-b border-gray-200 mb-4 my-5">
-                    <h5 class="text-base font-semibold py-4 px-4 ">ارسال درخواست</h5>
-                    <form class="px-2 pb-3 ">
+                <div class="bg-[#fff] rounded-[8px] border-b border-gray-200 my-5">
+                    <h5 class="text-base font-semibold py-4 px-4">ارسال درخواست</h5>
+                    <form class="px-2 pb-3">
                         <div class="mb-4">
-
-
                             <label for="name" class="block mb-2 text-sm font-medium text-[#A1A1AA]"></label>
-                            <input type="text" id="name" name="name" placeholder="نام و نام خانوادگی" class="w-full p-3 border border-gray-300 font-bold text-base rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CB202A]">
+                            <input type="text" id="name" name="name" placeholder="نام و نام خانوادگی" class="custom-shadow w-full   border-gray-300 font-bold text-base rounded-lg focus:outline-none focus:ring-gray-300 ">
                         </div>
 
                         <div class="mb-4">
                             <label for="phone" class="block mb-2 text-sm font-medium text-[#A1A1AA]"></label>
-                            <input id="phone" name="phone" placeholder="شماره موبایل" class="w-full p-3 border border-gray-300 rounded-lg font-bold text-base focus:outline-none focus:ring-2 focus:ring-[#CB202A]">
+                            <input id="phone" name="phone" placeholder="شماره موبایل" class="custom-shadow w-full   border-gray-300 rounded-lg font-bold text-base focus:outline-none focus:ring-gray-300 ">
                         </div>
 
                         <div class="mb-4">
                             <label for="message" class="block mb-2 text-sm font-medium text-[#A1A1AA]"></label>
-                            <textarea id="message" name="message" placeholder="متن درخواست" class=" w-full p-3 border border-gray-300 font-bold text-base rounded-lg focus:outline-none focus:ring-2 focus:ring-[#CB202A] h-[250px] resize-none"></textarea>
+                            <textarea id="message" name="message" placeholder="متن درخواست" class="custom-shadow w-full   border-gray-300 font-bold text-base rounded-lg focus:outline-none focus:ring-gray-300 h-[250px] resize-none "></textarea>
                         </div>
 
                         <div>
                             <span class="flex">
-                                <button class="bg-[#CB202A] text-[#fff] text-base py-3 px-9 font-extrabold my-1 m-auto rounded-lg">ارسال درخواست</button>
-                            </span>
+                <button class="bg-[#CB202A] text-[#fff] text-base py-3 px-9 font-extrabold mt-6 mb-1 m-auto rounded-lg">ارسال درخواست</button>
+            </span>
                         </div>
                     </form>
                 </div>
+
+
             </div>
     </section>
 
