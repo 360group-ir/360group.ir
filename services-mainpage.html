@@ -6,9 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>خدمات 360</title>
   <link href="https://fonts.cdnfonts.com/css/vazirmatn" rel="stylesheet">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" /> -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./styles/main.css">
   <link rel="stylesheet" href="./styles/tailwind.css">
+  <link rel="stylesheet" href="./src/output.css">
+  <link rel="stylesheet" href="./tailwind.config.js">
   <style>
     @font-face {
       font-family: 'Vazirmatn';
@@ -35,28 +38,25 @@
     .slide-up {
       animation: slideUp 0.5s ease-out forwards;
     }
-   
-/* Menu Styling */
-.menu {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #27AAE1;
-  color: white;
-  z-index: 50;
-  transform: translateY(100%);
-  transition: transform 0.5s ease-in-out;
-}
 
-/* Active state (menu visible) */
-.menu.active {
-  transform: translateY(0);
-}
+    /* Menu Styling */
+    .menu {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #27AAE1;
+      color: white;
+      z-index: 50;
+      transform: translateY(100%);
+      transition: transform 0.5s ease-in-out;
+    }
 
-
-
+    /* Active state (menu visible) */
+    .menu.active {
+      transform: translateY(0);
+    }
   </style>
 </head>
 
@@ -68,38 +68,38 @@
     <!-- Chevron Button -->
     <div class="main1 flex justify-between items-center px-4 py-2">
       <button id="menu-toggle" class="text-2xl">
-          <a href="menu-service.html">
-              <img src="assets/svg/Menu.svg" alt="" class="mr-3  w-[25px] h-[25px]">
-          </a>
+        <a href="menu-service.html">
+          <img src="assets/svg/Menu.svg" alt="" class="mr-3  w-[25px] h-[25px]">
+        </a>
       </button>
       <button class="text-2xl" onclick="goBack()">
-              <img src="assets/svg/Chevron left.svg" alt="" class="ml-3 my-5 w-[25px] h-[25px] hover:cursor-pointer">
+        <img src="assets/svg/Chevron left.svg" alt="" class="ml-3 my-5 w-[25px] h-[25px] hover:cursor-pointer">
       </button>
-  </div>
+    </div>
   </header>
 
 
-      <!--menu-->
-      <div id="menu-container" 
-      class="fixed inset-x-0 bottom-0 bg-white text-gray-800 p-6 transform translate-y-full shadow-lg rounded-t-lg">
-        <header class="p-4 flex justify-between items-center bg-white text-[#27AAE1]">
-          <h2 class="text-xl font-bold">منو</h2>
-          <button id="close-menu" class="text-lg bg-red-500 text-white px-4 py-2 rounded">
-            بستن
-          </button>
-        </header>
-        <nav class="flex flex-col items-center justify-center text-white text-lg space-y-4 mt-6">
-          <a href="index.html">صفحه اصلی</a>
-          <a href="group-main-page.html">گروه 360</a>
-          <a href="#">خدمات 360</a>
-          <a href="https://360tools.io/auth/login">ابزار 360</a>
-          <a href="group-job-offers.html">فرصت‌های شغلی</a>
-          <a href="contact-us.html">ارتباط با ما</a>
-        </nav>
-      </div>
-      
+  <!--menu-->
+  <div id="menu-container"
+    class="fixed inset-x-0 bottom-0 bg-white text-gray-800 p-6 transform translate-y-full shadow-lg rounded-t-lg">
+    <header class="p-4 flex justify-between items-center bg-white text-[#27AAE1]">
+      <h2 class="text-xl font-bold">منو</h2>
+      <button id="close-menu" class="text-lg bg-red-500 text-white px-4 py-2 rounded">
+        بستن
+      </button>
+    </header>
+    <nav class="flex flex-col items-center justify-center text-white text-lg space-y-4 mt-6">
+      <a href="index.html">صفحه اصلی</a>
+      <a href="group-main-page.html">گروه 360</a>
+      <a href="#">خدمات 360</a>
+      <a href="https://360tools.io/auth/login">ابزار 360</a>
+      <a href="group-job-offers.html">فرصت‌های شغلی</a>
+      <a href="contact-us.html">ارتباط با ما</a>
+    </nav>
+  </div>
 
-      
+
+
 
 
   <br>
@@ -424,7 +424,7 @@
           </div>
         </div>
       </div>
-
+      <br><br>
     </div>
   </main>
   <script>
@@ -474,25 +474,25 @@
     }
 
     document.addEventListener("DOMContentLoaded", () => {
-  const menuContainer = document.getElementById("menu-container");
-  const menuToggle = document.getElementById("menu-toggle");
-  const closeMenu = document.getElementById("close-menu");
+      const menuContainer = document.getElementById("menu-container");
+      const menuToggle = document.getElementById("menu-toggle");
+      const closeMenu = document.getElementById("close-menu");
 
-  menuToggle.addEventListener("click", () => {
-    menuContainer.classList.remove("translate-y-full");
-    menuContainer.classList.add("translate-y-0");
-  });
+      menuToggle.addEventListener("click", () => {
+        menuContainer.classList.remove("translate-y-full");
+        menuContainer.classList.add("translate-y-0");
+      });
 
-  closeMenu.addEventListener("click", () => {
-    menuContainer.classList.remove("translate-y-0");
-    menuContainer.classList.add("translate-y-full");
-  });
-});
+      closeMenu.addEventListener("click", () => {
+        menuContainer.classList.remove("translate-y-0");
+        menuContainer.classList.add("translate-y-full");
+      });
+    });
     const openMenu = document.getElementById('open-menu');
     const closeMenu = document.getElementById('close-menu');
     const menu = document.getElementById('menu');
 
-      openMenu.addEventListener('click', () => {
+    openMenu.addEventListener('click', () => {
       menu.classList.remove('translate-y-full');
       menu.classList.add('slide-up');
     });
@@ -501,7 +501,7 @@
       menu.classList.remove('slide-up');
       menu.classList.add('translate-y-full');
     });
-    
+
 
 
   </script>

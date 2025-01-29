@@ -58,11 +58,6 @@ body {
     /* Move the icon upward */
 }
 
-.btn-2 {
-    border-radius: 6px;
-    background-color: #CB202A;
-    color: #fff;
-}
 
 .sell-btn2 {
     background-color: #CB202A;
@@ -76,3 +71,33 @@ body {
     padding: 3;
 }
 
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.menu-animation {
+    animation: slideUp 1s ease-out forwards;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+.page-exit {
+    animation: slideDown 1s ease-out;
+    animation-fill-mode: forwards;
+}
